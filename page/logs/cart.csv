@@ -1,0 +1,26 @@
+Type,IP,Name,ID,Time,Page,Message,LogNumber
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:47",cart,"Product pin added to cart",LogMsg-9718
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:49",cart,"Product strijkembleem added to cart",LogMsg-4203
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:49",cart,"Product paraplu added to cart",LogMsg-7318
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:50",cart,"Tried to add paraplu, while already in cart",LogMsg-1797
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:51",cart,"Tried to add strijkembleem, while already in cart",LogMsg-9685
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:52",cart,"Tried to add pin, while already in cart",LogMsg-1588
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:52",cart,"Tried to add sjaal, while already in cart",LogMsg-1741
+"No Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:54",cart,"Item deleted from cart paraplu",LogMsg-3154
+"No Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:55",cart,"Item deleted from cart pin",LogMsg-6037
+"No Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:55",cart,"Item deleted from cart sjaal",LogMsg-8990
+"No Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:56",cart,"Item deleted from cart strijkembleem",LogMsg-2009
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:40:18",cart,"Product pin added to cart",LogMsg-5848
+"Low Urgency",127.0.0.1,Dennis,4,"07-03-2022 10:34:54",cart,"Product sjaal added to cart",LogMsg-8946
+"Low Urgency",127.0.0.1,Dennis,4,"07-03-2022 21:07:36",cart,"Product pin added to cart",LogMsg-8909
+"Low Urgency",127.0.0.1,Test,5,"09-03-2022 09:23:23",cart,"Product sjaal added to cart",LogMsg-750010
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:22",cart,"Product sjaal added to cart",LogMsg-594727
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:24",cart,"Product pin added to cart",LogMsg-137618
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:25",cart,"Product strijkembleem added to cart",LogMsg-934761
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:27",cart,"Product paraplu added to cart",LogMsg-753628
+"No Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:32",cart,"Item deleted from cart paraplu",LogMsg-235051
+"No Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:33",cart,"Item deleted from cart strijkembleem",LogMsg-498246
+"No Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:33",cart,"Item deleted from cart pin",LogMsg-526083
+"No Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:33",cart,"Item deleted from cart sjaal",LogMsg-545301
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:54:31",cart,"Product sjaal added to cart",LogMsg-655317,0.02539
+"No Urgency",127.0.0.1,Dennis,4,"10-03-2022 12:47:32",cart,"Item deleted from cart sjaal",LogMsg-618153,0.02446

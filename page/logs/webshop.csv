@@ -1,0 +1,8 @@
+Type,IP,Name,ID,Time,Page,Message,LogNumber
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:19:30",webshop,"Rated product with ID:  ",LogMsg-630296,0.02239
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:19:36",webshop,"Rated product with ID:  ",LogMsg-523273,0.01489
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:21:37",webshop,"Rated product with ID:  ",LogMsg-724810,0.03135
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:21:42",webshop,"Rated product with ID:  ",LogMsg-398968,0.0132
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:21:57",webshop,"Rated product with ID:  ",LogMsg-393053,0.01589
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:22:09",webshop,"Rated product with ID:  ",LogMsg-485676,0.01576
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:22:09",webshop,"Rated product with ID:  ",LogMsg-264481,0.01122

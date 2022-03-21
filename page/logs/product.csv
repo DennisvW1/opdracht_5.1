@@ -1,0 +1,29 @@
+Type,IP,Name,ID,Time,Page,Message,LogNumber
+"Low Urgency",127.0.0.1,Dennis,4,"04-03-2022 11:28:45",product,"Product sjaal added to cart",LogMsg-3012
+"Low Urgency",127.0.0.1,Dennis,4,"07-03-2022 21:05:12",product,"Tried to add sjaal, while already in cart",LogMsg-5181
+"Low Urgency",127.0.0.1,Dennis,4,"07-03-2022 21:05:33",product,"Tried to add sjaal, while already in cart",LogMsg-8776
+"Low Urgency",127.0.0.1,Dennis,4,"07-03-2022 21:07:27",product,"Tried to add sjaal, while already in cart",LogMsg-3346
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 08:43:09",product,"Rated product with ID: 1 ",LogMsg-2647
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 08:43:42",product,"Rated product with ID: 1 ",LogMsg-5863
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 08:47:08",product,"Rated product with ID: 1 ",LogMsg-6777
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 08:47:23",product,"Rated product with ID: 1 ",LogMsg-2302
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 08:49:48",product,"Rated product with ID: 2 ",LogMsg-9806
+"Low Urgency",127.0.0.1,Test,5,"09-03-2022 09:03:47",product,"Rated product with ID: 1 ",LogMsg-132606
+"Low Urgency",127.0.0.1,Test,5,"09-03-2022 09:04:11",product,"Rated product with ID: 2 ",LogMsg-434564
+"Low Urgency",127.0.0.1,Test,5,"09-03-2022 09:23:40",product,"Rated product with ID: 1 ",LogMsg-727456
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 10:38:55",product,"Rated product with ID: 1 ",LogMsg-170686
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 10:39:10",product,"Rated product with ID: 1 ",LogMsg-775092
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 10:47:55",product,"Rated product with ID: 4 ",LogMsg-441492
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:48:03",product,"Rated product with ID: 1 ",LogMsg-453894
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:48:17",product,"Rated product with ID: 1 ",LogMsg-579720
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:48:46",product,"Rated product with ID: 1 ",LogMsg-988948
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:48:51",product,"Rated product with ID: 1 ",LogMsg-214487
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:49:10",product,"Rated product with ID: 1 ",LogMsg-712873
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:49:16",product,"Rated product with ID: 1 ",LogMsg-733973
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:49:41",product,"Rated product with ID: 1 ",LogMsg-213572
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 11:50:42",product,"Rated product with ID: 1 ",LogMsg-783097
+"Low Urgency",127.0.0.1,Dennis,4,"09-03-2022 12:10:20",product,"Rated product with ID: 3 ",LogMsg-746427
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:47:46",product,"Rated product with ID: 1 ",LogMsg-773699
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:55:08",product,"Rated product with ID: 1 ",LogMsg-652423,0.01609
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:22:43",product,"Rated product with ID: 2 ",LogMsg-872453,0.01881
+"Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:28:49",product,"Rated product with ID: 2 ",LogMsg-920995,0.01961

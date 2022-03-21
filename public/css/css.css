@@ -1,0 +1,281 @@
+body {
+	max-width: 800px;
+	margin: auto;
+	text-align: left;
+	background-color: lightblue;
+}
+
+.inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+ul.menu{
+	text-align: center;
+	list-style-type: none;
+}
+
+ul.menu li {
+	display: inline;
+	border: 2px solid black;	
+	margin: 2px;
+}
+
+ul.menu li > a {
+	color: white;
+	background-color: blue;
+	text-decoration: none;
+	
+}
+
+.header{
+	min-height: 48px;
+	font-size: 40px;
+	text-align: center;
+	color: red;
+}
+
+.form{
+	width: 700px;
+	border: 2px /*solid black*/;
+	margin: auto;
+}
+
+.lbl{
+	border: 1px /*solid white*/;
+	margin: auto;
+	width: 15%;
+}
+
+.input{
+	width: 60%;
+}
+
+.lblpw{
+	border: 1px /*solid white*/;
+	margin: auto;
+	width: 21%;
+}
+
+.inputpw{
+	width: 50%;
+}
+
+.bericht{
+	width: 60%;
+	resize: none;
+	height: 100px;
+}
+
+#dropdown{
+	border: 1px /*solid red*/;
+	width: 10%;
+}
+
+.notReq{
+	color: black;
+}
+.req{
+	color: red;
+}
+
+#req{
+	color: red;
+	text-align: center;
+}
+
+
+.sturen{
+	/*border: 1px solid yellow;*/
+	width: 15%;
+	text-align: center;
+	margin-left: 20%;
+}
+
+.sturenpw{
+	/*border: 1px solid yellow;*/
+	width: 25%;
+	text-align: center;
+	margin-left: 20%;
+}
+
+h1{
+text-align: center;
+color: red;
+}
+
+h2{
+text-align: center;
+color: green;
+}
+
+h3{
+	text-align: center;
+	}
+
+p.changed{
+	font-size: 12px;
+	background-color: white;
+	color: darkgray;
+}
+
+p.result{
+	text-align: left;
+	font-style: italic;
+	background-color: lightblue;
+	color: black;
+}
+
+iframe{
+	border: 0px;
+	width: 100%;
+	height: 500px;
+}
+
+footer{
+	width: 100%;
+	background-color: black;
+	color: white;
+	font-size: 10px;
+	text-align: right;
+}
+
+.productTabel{
+	width: 75%;
+	border: 1px solid black; 
+	margin: auto;
+}
+
+.product{
+	width: 50%;
+	margin: auto;
+}
+
+#webshoptitle{
+	width: 100%;
+	text-align: center;
+}
+
+#webshopfoto{
+	display: block;
+	width: 50%;
+	height: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#webshoponder{
+	width: 50%;
+	text-align: center;
+}
+
+.productOmschrijving{
+	width: 75%;
+	height: 75;
+	margin: auto;
+}
+#producttitle{
+	width: 100%;
+	text-align: center;
+}
+
+#productfoto{
+	display: block;
+	width: 80%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#productonder{
+	width: 50%;
+	text-align: center;
+}
+
+#productomschrijving{
+	width: 75%;
+	text-align: center;
+}
+
+#productomschrijvinglbl{
+	width: 25%;
+	text-align: left;
+	font-style: italic;
+}
+
+#toegevoegd{
+	color: green;
+	text-align: center;
+	width: 75%;
+	height: 25%;
+	max-height: 20px;
+	margin: auto;
+}
+
+.foutmelding{
+	color: red;
+	text-align: center;
+	height: 25%;
+	width: 75%;
+	max-height: 20px;
+	margin: auto;
+}
+
+.totaal{
+	width: 75%;
+	text-align: center;
+	font-weight: bold; 
+	margin: auto;
+}
+
+.bestellen{
+	width: 75%;
+	text-align: right;
+	margin: 20px;
+}
+
+.topVijf{
+	width: 40%;
+	border: 1px solid black; 
+	margin: auto;
+}
+
+#topVijf{
+	width: 80%;
+	margin: auto;
+}
+
+#topRechts{
+	width: 30%;
+}
+
+#topMidden{
+	width: 40%;
+}
+
+#topLinks{
+	width: 30%;
+}
+
+.messageBox{
+	width: 60%;
+	height: 40px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	position: center;
+	border: 2px solid #000000;
+}
+.messageError{
+	color: red;
+	text-align: center;
+	position: center;
+	margin-top: 10px;
+}
+
+.messageSuccess{
+	color: green;
+	text-align: center;
+	position: center;
+	margin-top: 10px;
+}
