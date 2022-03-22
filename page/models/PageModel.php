@@ -36,8 +36,8 @@ class PageModel extends HtmlDoc
                                     <div class='card-body p-2'>
                                         <div class='text-center'>
 
-                                            <form class='rateShop' action='' method=''>
-                                                <input type='radio' id='star5' name='rating' value='5' ". (($productRating->average_rating >= 5)?'checked=checked':'') ." disabled>
+                                            <form class='rateShop' action='' method='POST'>
+                                                <input type='radio' id='star5' name='rating' value='5' ". (($productRating->average_rating >= 5)?'checked=checked':'') ." disabled>                                                
                                                 <label for='star5'></label>
                                                 <input type='radio' id='star4' name='rating' value='4' ". (($productRating->average_rating >= 4)?'checked=checked':'') ." disabled>
                                                 <label for='star4'></label>

@@ -27,3 +27,6 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:55:08",product,"Rated product with ID: 1 ",LogMsg-652423,0.01609
 "Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:22:43",product,"Rated product with ID: 2 ",LogMsg-872453,0.01881
 "Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 13:28:49",product,"Rated product with ID: 2 ",LogMsg-920995,0.01961
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 09:09:58",product,"Rated product with ID: 2 ",LogMsg-107260,0.04108
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 09:10:01",product,"Rated product with ID: 2 ",LogMsg-714622,0.01124
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 09:12:32",product,"Rated product with ID: 3 ",LogMsg-954023,0.01926

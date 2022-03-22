@@ -5,22 +5,18 @@ class MainController extends Controller
 {
     protected $controller;
 
-    public function __construct()
+    protected function showResponse()
     {
         if(isset($_POST['ajax']))
         {
-            $this->controller = "AjaxController";
+            $controller = new AjaxController();
+            $controller->showPage();
         }
         else
         {
-            $this->controller = "PageController";
+            $controller = new PageController();
+            $controller->showPage();
         }
     }
-    
-    protected function showResponse()
-    {
-        $controller = new $this->controller();
-        $controller->showPage();
-    }
 
-}
+} // end class

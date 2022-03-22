@@ -109,3 +109,10 @@
 	color: #8e8d8d;
     text-align: left;
 }
+
+#state-hidden, #city-hidden{
+    display: none;
+}
+#state-select, #city-select{
+    display: none;
+}

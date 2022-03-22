@@ -94,9 +94,9 @@ class PageController extends Controller
                             $this->db->insertRegister($check);
                             // clear POST super global
                             $_POST = array();
-                            // set message succusfully registered
-                            Logging::LogCsv("User registered successfully", LogLevel::LOW);
+                            // set message succusfully registered and log it
                             Messages::setMessage("Registered successfully, you can login now!", "success");
+                            Logging::LogCsv("User registered successfully", LogLevel::LOW);
                             // redirect to login page
                             $this->response['page'] = "login";
                             break;
@@ -109,6 +109,7 @@ class PageController extends Controller
                             $_SESSION['user_id'] = $id;
                             $_SESSION['user_email'] = $check['email'];
                             $_SESSION['user_level'] = $this->db->getLevel($check['email']);
+                            Messages::setMessage("You have successfully logged in!","succes");
                             Logging::LogCsv("User logged in successfully",LogLevel::NONE);
                             // clear out the post array
                             $_POST = array();

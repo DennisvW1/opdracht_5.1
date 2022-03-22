@@ -1,5 +1,8 @@
 <?php
-include("ContactForm.php");
+require_once "../page/config.php";
 
-$form = new ContactForm("contact","","POST","Versturen");
-?>
+include MODELROOT."Autoloader.php";
+$db = new DatabasePDO();
+$test = $db->getCountryName(155);
+
+print_r($test->name);

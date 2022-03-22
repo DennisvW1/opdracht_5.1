@@ -15,4 +15,4 @@
     define("INTERFACEROOT",dirname(__FILE__)."/interfaces/");
     define("CONTROLLERROOT",dirname(__FILE__)."/controllers/");
 
-    define("SITENAME","Opdracht 4.3");
+    define("SITENAME","Opdracht 5.1");

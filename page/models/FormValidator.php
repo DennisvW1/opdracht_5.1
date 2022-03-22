@@ -29,7 +29,7 @@ class FormValidator
                     {
                         if(!array_key_exists($field, $this->data))
                         {
-                            Messages::displayMessage("$field is not present in data","error");
+                            Messages::setMessage("$field is not present in data","error");
                             return;
                         }
                     }
@@ -37,17 +37,19 @@ class FormValidator
                     $this->validateName();
                     $this->validateEmail();
                     $this->validateMessage();
-
                     return $this->validated;
-                break;
+                    break;
 
                 case "register":
-                    $this->fields = ['name', 'email', 'password','passwordrepeat'];
+                    $formFields = new FormInfo("register");
+                    $formFields = $formFields->getArrayNames();
+                    $this->fields = $formFields;
+
                     foreach($this->fields as $field)
                     {
                         if(!array_key_exists($field, $this->data))
                         {
-                            Messages::displayMessage("$field is not present in data","error");
+                            Messages::setMessage("$field is not present in data","error");
                             return;
                         }
                     }
@@ -56,6 +58,15 @@ class FormValidator
                     $this->validateEmailRegister();
                     $this->validatePasswordRegister();
                     $this->validatePasswordRepeat();
+
+                    $country = $this->db->getCountryName($this->data["country"]);
+                    $state = $this->db->getStateName($this->data["state"]);
+                    $city = $this->db->getCityName($this->data["city"]);
+
+                    $this->validated["country"] = $country->name;
+                    $this->validated["state"] = $state->name;
+                    $this->validated["city"] = $city->name;
+
                     return $this->validated;
                     break;
 
@@ -65,7 +76,7 @@ class FormValidator
                     {
                         if(!array_key_exists($field, $this->data))
                         {
-                            Messages::displayMessage("$field is not present in data","error");
+                            Messages::setMessage("$field is not present in data","error");
                             return;
                         }
                     }
@@ -144,6 +155,8 @@ class FormValidator
         }
         else
         {
+            $this->validated['message'] = $val;
+
             if($this->validated['all_ok'])
             {
                 $this->validated['all_ok'] = true;

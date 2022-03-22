@@ -1,7 +1,5 @@
 <?php
 
-require_once MODELROOT."Autoloader.php";
-
 class AjaxController extends Controller
 {
 
@@ -23,7 +21,17 @@ class AjaxController extends Controller
             switch ($this->request['ajax'])
             {
                 case "rating":
-                    Logging::LogCsv("Rated product with ID: ".$_GET['id']." ",LogLeveL::LOW, "rating");
+                    print_r($_POST);
+                    if(isset($_POST["prodid"]))
+                    {
+                        $productID = $_POST["prodid"];
+                    }
+                    else
+                    {
+                        $productID = $_GET['id'];
+                    }
+
+                    Logging::LogCsv("Rated product with ID: ".$productID." ",LogLeveL::LOW, "rating");
                     break;
             }
         }
@@ -35,12 +43,42 @@ class AjaxController extends Controller
 
     protected function showResponse()
     {
+
+        switch($_POST['ajax'])
+        {
+            case "rating":
+                // Rating class
+                if(isset($_POST["prodid"]))
+                {
+                    $productID = $_POST["prodid"];
+                }
+                else
+                {
+                    $productID = $_GET['id'];
+                }
+
+                $rate = new Rating($_POST, $productID);
+                $rate->productRating();
+                break;
+
+            case "register":
+                if(isset($_POST["country_id"]))
+                {
+                    $this->db = new DatabasePDO();
+                    $id = $_POST["country_id"];
+                    return $this->db->getStates($id);
+                }
+                else if(isset($_POST["state_id"]))
+                {
+                    $this->db = new DatabasePDO();
+                    $id = $_POST["state_id"];
+                    return $this->db->getCities($id);
+                }
+                break;
+        }
         if($_POST['ajax'] == "rating")
         {
-            // Rating class
-            $productID = $_GET['id'];
-            $rate = new Rating($_POST, $productID);
-            $rate->productRating();
+
         }
     }
     

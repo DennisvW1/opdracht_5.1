@@ -2,15 +2,29 @@ $(function() {
     $('.rate input').on('click', function(e){
         e.preventDefault();
         let ratingNum = $(this).val();
-        let form = $('form'),
+        let form = $('form');
         url = form.attr('action');
-        // url = "../pages/controllers/AjaxHandler.php";
         let action = "rating";
-        // insertRating(url, action, ratingNum);
         postAjax(url, action, ratingNum);
     });
-    // });
-});
+    
+    $("#country-select").on("change", function(e){
+        // on change country
+        document.getElementById("state-hidden").style.display = "none";
+        document.getElementById("state-select").style.display = "none";
+        document.getElementById("city-hidden").style.display = "none";
+        document.getElementById("city-select").style.display = "none";
+        let countryId = (this).value;
+        countryChangeValue(countryId);
+    });
+
+    $("#state-select").on("change", function(e){
+        // on change state
+        let stateId = (this).value;
+        stateChangeValue(stateId);
+    });
+    
+    });
 
 function postAjax(url, action, ratingNum)
 {
@@ -41,4 +55,33 @@ function postAjax(url, action, ratingNum)
             console.log("Error: "+resp);
         }
     });
+}
+
+function countryChangeValue(id){
+    document.getElementById("state-hidden").style.display = "block";
+    document.getElementById("state-select").style.display = "block";
+
+    $.ajax({
+        type: "POST",
+        url: "",
+        data: { ajax: "register", country_id: id},
+        success: function(resp){
+            $("#state-select").html(resp);
+        }
+    })
+}
+
+function stateChangeValue(stateId)
+{
+    document.getElementById("city-hidden").style.display = "block";
+    document.getElementById("city-select").style.display = "block";
+
+    $.ajax({
+        type: "POST",
+        url: "",
+        data: { ajax: "register", state_id: stateId},
+        success: function(resp){
+            $("#city-select").html(resp);
+        }
+    })
 }

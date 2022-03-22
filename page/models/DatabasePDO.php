@@ -1,5 +1,5 @@
 <?php
-include  MODELROOT."Autoloader.php";
+
 class DatabasePDO implements IDatabase
 {
     private $dbHost = DB_HOST;
@@ -212,10 +212,13 @@ class DatabasePDO implements IDatabase
         {
             $option = array("cost", 5);
             $password = password_hash($check['password'], PASSWORD_DEFAULT, $option);
-            $this->query("INSERT INTO gebruikers (naam, email, wachtwoord) VALUES (:name, :email, :password)");
+            $this->query("INSERT INTO gebruikers (naam, email, wachtwoord, user_country, user_state, user_city) VALUES (:name, :email, :password, :country, :state, :city)");
             $this->bind("name",$check['name']);
             $this->bind("email",$check['email']);
             $this->bind("password",$password);
+            $this->bind("country",$check['country']);
+            $this->bind("state",$check['state']);
+            $this->bind("city",$check['city']);
             $this->execute();
         }
         catch(PDOException $e)
@@ -272,4 +275,61 @@ class DatabasePDO implements IDatabase
         $this->execute();
         return $this->rowCount();
     }
-}
+
+    public function getCountries()
+    {
+        $this->query("SELECT * FROM countries ORDER BY name");
+        $result = $this->resultSet();
+
+        return $result;
+    }
+
+    public function getStates($id)
+    {
+        $this->query("SELECT * FROM states WHERE country_id=$id");
+        $result = $this->resultSet();
+
+        echo "<option value=0 disabled selected>Please select your state</option>";
+
+        foreach ($result as $key)
+        {
+        echo "<option value='$key->id'>$key->name</option>";
+        }
+    }
+
+    public function getCities($id)
+    {
+        $this->query("SELECT * FROM cities WHERE state_id=$id ORDER BY name");
+        $result = $this->resultSet();
+
+        echo "<option value=0 disabled selected>Please select your city</option>";
+
+        foreach ($result as $key)
+        {
+        echo "<option value='$key->id'>$key->name</option>";
+        }
+
+    }
+
+    public function getCountryName($id)
+    {
+        $this->query("SELECT name FROM countries WHERE id = $id");
+        $result = $this->single();
+        return $result;
+    }
+
+    public function getStateName($id)
+    {
+        $this->query("SELECT name FROM states WHERE id = $id");
+        $result = $this->single();
+        return $result;
+    }
+
+    public function getCityName($id)
+    {
+        $this->query("SELECT name FROM cities WHERE id = $id");
+        $result = $this->single();
+        return $result;
+    }
+
+} // end class
