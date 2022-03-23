@@ -12,3 +12,4 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:25:50",logout,"User logged off successfully",LogMsg-685619,0.03313
 "No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:49:51",logout,"User logged off successfully",LogMsg-454713,0.03464
 "No Urgency",127.0.0.1,Dennis,4,"22-03-2022 13:02:50",logout,"User logged off successfully",LogMsg-656170,0.02298
+"No Urgency",127.0.0.1,Dennis,4,"23-03-2022 13:53:34",logout,"User logged off successfully",LogMsg-978361,0.02216

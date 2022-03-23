@@ -412,4 +412,18 @@ class DatabasePDO implements IDatabase
         return $result;
     }
 
+    public function logToDatabase($data)
+    {
+        $this->query("INSERT INTO log (type, ip, username, userid, page, text, lognumber, time_to_log) VALUES (:type, :ip, :username, :userid, :page, :text, :lognumber, :time_to_log)");
+        $this->bind("type", $data["type"]);
+        $this->bind("ip", $data["ip"]);
+        $this->bind("username", $data["username"]);
+        $this->bind("userid", $data["userid"]);
+        $this->bind("page", $data["page"]);
+        $this->bind("text", $data["text"]);
+        $this->bind("lognumber", $data["lognumber"]);
+        $this->bind("time_to_log", $data["time_to_log"]);
+
+        $this->execute();
+    }
 } // end class

@@ -2,7 +2,6 @@
 require_once MODELROOT."Autoloader.php";
 class Logging implements ILog
 {
-
     public static function LogCsv($text, $type, $page="home", $name="guest", $id=0)
     {
         Timer::startTimer();
@@ -62,10 +61,13 @@ class Logging implements ILog
         //--------------------
         fputcsv($usersfile, $data);
         fclose($usersfile);
+
+        // Logging::LogDB($text, $type, $page, $name, $id);
     }
 
     public static function LogDB($text, $type, $page="home", $name="guest", $id=0)
     {
+        Timer::startTimer();
         //--------------------
         // Set the session variables to be added into the log
         //--------------------
@@ -84,9 +86,25 @@ class Logging implements ILog
         // Get the date and time from the event
         //--------------------
         $time = date("d-m-Y H:i:s", time());
-        
-        $data = array($type, $ip, $name, $id, $time, $page, $text, Logging::LogNumber(), Timer::logDuration());
-
+        Timer::stopTimer();
+        $data = array("type" => $type, 
+                    "ip" => $ip, 
+                    "username" => $name, 
+                    "userid" => $id, 
+                    "time" => $time, 
+                    "page" => $page, 
+                    "text" => $text, 
+                    "lognumber" => Logging::LogNumber(),
+                    "time_to_log" => Timer::logDuration());
+        try
+        {
+            $db = new DatabasePDO();
+            $db->logToDatabase($data);
+        }
+        catch(Exception $e)
+        {
+            echo $e->getMessage();
+        }
     }
 
     private static function LogNumber()
