@@ -24,3 +24,29 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "No Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:49:33",cart,"Item deleted from cart sjaal",LogMsg-545301
 "Low Urgency",127.0.0.1,Dennis,4,"10-03-2022 11:54:31",cart,"Product sjaal added to cart",LogMsg-655317,0.02539
 "No Urgency",127.0.0.1,Dennis,4,"10-03-2022 12:47:32",cart,"Item deleted from cart sjaal",LogMsg-618153,0.02446
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:09:31",cart,"Product sjaal added to cart",LogMsg-849042,0.0233
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:18",cart,"Amount changed in cart for sjaal to 3",LogMsg-123068,0.01801
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:20",cart,"Amount changed in cart for sjaal to 2",LogMsg-951068,0.01537
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:22",cart,"Amount changed in cart for sjaal to 1",LogMsg-480600,0.01594
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:29",cart,"Amount changed in cart for sjaal to 3",LogMsg-823280,0.0148
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:30",cart,"Amount changed in cart for sjaal to 1",LogMsg-293525,0.02618
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:31",cart,"Amount changed in cart for sjaal to 2",LogMsg-626500,0.02753
+"No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:34",cart,"Item deleted from cart sjaal",LogMsg-968636,0.01702
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:10:36",cart,"Product sjaal added to cart",LogMsg-222592,0.03058
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:11:15",cart,"Order successfully placed",LogMsg-719445,0.02043
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:14:11",cart,"Order successfully placed",LogMsg-250130,0.02766
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:15:09",cart,"Order successfully placed",LogMsg-248628,0.02723
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:15:16",cart,"Order successfully placed",LogMsg-678230,0.02736
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:15:23",cart,"Tried to add sjaal, while already in cart",LogMsg-419092,0.01848
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:17:29",cart,"Tried to add sjaal, while already in cart",LogMsg-407573,0.02722
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:18:10",cart,"Product sjaal added to cart",LogMsg-715316,0.03583
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:18:14",cart,"Order successfully placed",LogMsg-129821,0.02762
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:18:24",cart,"Order successfully placed",LogMsg-180180,0.0291
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:20:41",cart,"Product pin added to cart",LogMsg-793201,0.02527
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:21:12",cart,"Order successfully placed",LogMsg-131742,0.02255
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:21:42",cart,"Order successfully placed",LogMsg-398482,0.02008
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:21:53",cart,"Order successfully placed",LogMsg-288539,0.01896
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:22:26",cart,"Order successfully placed",LogMsg-743727,0.02164
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:23:16",cart,"Product strijkembleem added to cart",LogMsg-270056,0.04275
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:23:19",cart,"Amount changed in cart for strijkembleem to 2",LogMsg-427137,0.01549
+"Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:23:19",cart,"Order successfully placed",LogMsg-863264,0.01691

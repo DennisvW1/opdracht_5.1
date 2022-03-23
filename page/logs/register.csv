@@ -59,3 +59,103 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber,TimeToLog
 "Low Urgency",127.0.0.1,guest,0,"22-03-2022 09:03:00",register,"User registered successfully",LogMsg-653274,0.0372
 "Low Urgency",127.0.0.1,guest,0,"22-03-2022 09:09:10",register,"User registered successfully",LogMsg-920777,0.02417
 "No Urgency",127.0.0.1,Dennis,4,"22-03-2022 09:09:22",register,"User logged in successfully",LogMsg-475927,0.02558
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:53:25",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-728196,0.08894
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:54:55",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-363465,0.04751
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:56:44",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-598644,0.07154
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:57:10",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-456486,0.05373
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:57:32",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-577521,0.04
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:04:59",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-217599,0.06893
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:05:02",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-957569,0.05413
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:05:13",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-587442,0.10132
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:05:47",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-338480,0.06647
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:05:48",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-694699,0.09621
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:05:55",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-159986,0.04103
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:06:06",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-363640,0.02181
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:06:15",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-583634,0.06599
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:10:42",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-978842,0.06384
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:10:54",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-195705,0.03401
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:11:14",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-585977,0.02344
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:13:20",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-446194,0.03741
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:13:30",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-584379,0.06087
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:13:46",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-890347,0.06603
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:13:52",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-601441,0.04483
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:14:59",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-579989,0.05089
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:15:12",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-649164,0.05466
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:15:13",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-268782,0.05338
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:15:19",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-677893,0.07308
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:15:53",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-849971,0.06104
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:15:59",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-577751,0.05667
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:16:06",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-165782,0.0516
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:31:22",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-524336,0.0891
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:39:10",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-350031,0.11366
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:39:48",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-375120,0.04959
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:39:54",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-375705,0.08993
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:40:45",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-207490,0.0649
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:40:47",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-675585,0.02752
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:40:51",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-355046,0.04249
+"Low Urgency",127.0.0.1,guest,0,"22-03-2022 14:41:16",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-559448,0.06682
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 09:23:47",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-619989,0.053
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 09:27:52",register,"User registered successfully",LogMsg-799142,0.04345
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:01:58",register,"User registered successfully",LogMsg-187973,0.08401
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:05:34",register,"User registered successfully",LogMsg-132642,0.03396
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:07:40",register,"User registered successfully",LogMsg-411258,0.05709
+"High Urgency",127.0.0.1,guest,0,"23-03-2022 10:08:52",register,"SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_country' cannot be null",LogMsg-579673,0.03657
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:08:52",register,"User registered successfully",LogMsg-398783,0.02035
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:10:33",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-537381,0.02801
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:10:40",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-519134,0.03492
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:10:49",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-221923,0.042
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:24:14",register,"User registered successfully",LogMsg-424590,0.04771
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:32:08",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-725093,0.04494
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:32:11",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-166610,0.02357
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:32:12",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-480431,0.02166
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:33:49",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-110234,0.02704
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:35:50",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-199252,0.0337
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:35:56",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-749188,0.05178
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:35:57",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-726451,0.03306
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:35:58",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-550286,0.04085
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:36:43",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-364117,0.13972
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:36:45",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-736532,0.05138
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:36:46",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-732343,0.03741
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:41:09",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-681727,0.06021
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:41:52",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-568536,0.03876
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:41:53",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-988701,0.03856
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:42:09",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-400563,0.04176
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:42:39",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-347306,0.0483
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:42:51",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-646728,0.02909
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:43:02",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-290196,0.02859
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:43:35",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-369805,0.06184
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:43:45",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-636881,0.02062
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:54:24",register,"User registered successfully",LogMsg-714702,0.03022
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:55:37",register,"Registering failed name: Dennis Email: * Email already exists!",LogMsg-582556,0.0248
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:55:47",register,"User registered successfully",LogMsg-593764,0.02537
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:56:09",register,"User registered successfully",LogMsg-885908,0.02717
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:57:31",register,"User registered successfully",LogMsg-478137,0.02505
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 10:57:54",register,"User registered successfully",LogMsg-655498,0.04001
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 11:00:00",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-555976,0.02429
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 11:00:08",register,"User registered successfully",LogMsg-249778,0.02425
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 11:01:17",register,"User registered successfully",LogMsg-757770,0.0232
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 11:02:11",register,"User registered successfully",LogMsg-394312,0.02484
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 11:37:04",register,"User registered successfully",LogMsg-812124,0.02795
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:25:36",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-904270,0.06804
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:43:20",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-588776,0.09856
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:43:30",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-594929,0.04312
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:44:00",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-210823,0.03738
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:44:05",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-685661,0.02612
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:45:20",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-937914,0.04213
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:45:36",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-497588,0.04271
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:49:40",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-514677,0.05308
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:49:47",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-812395,0.04058
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:49:54",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-351720,0.04013
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:50:57",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-764679,0.0451
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:51:13",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-950464,0.04474
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:51:15",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-790601,0.05214
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:51:29",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-401863,0.02638
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:51:38",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-652596,0.02344
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:51:53",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-418824,0.04302
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:52:44",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-302590,0.04664
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:52:50",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-107988,0.03219
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:52:53",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-211734,0.02638
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:53:02",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-182659,0.02786
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:53:07",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-798958,0.03903
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:53:17",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-665315,0.0359
+"Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:54:13",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-975772,0.03411

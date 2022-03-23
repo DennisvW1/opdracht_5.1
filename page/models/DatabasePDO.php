@@ -117,18 +117,16 @@ class DatabasePDO implements IDatabase
     {
         $this->query("SELECT user_level FROM gebruikers WHERE email=:email");
         $this->bind("email", $email);
-        $level = $this->single();
-        $level = $level->user_level;
-        return $level;
+        $result = $this->single();
+        return $result->user_level;
     }
 
     public function getId($email)
     {
         $this->query("SELECT id FROM gebruikers WHERE email=:email");
         $this->bind("email", $email);
-        $id = $this->single();
-        $id = $id->id;
-        return $id;
+        $result = $this->single();
+        return $result->id;
     }
 
     public function getAllProducts()
@@ -152,9 +150,8 @@ class DatabasePDO implements IDatabase
         return $result;
     }
 
-    public function getProduct($id)
+    public function getProduct($postId)
     {
-        $postId = $id;
         $this->query("SELECT * FROM producten WHERE productid=:id");
         $this->bind("id",$postId,PDO::PARAM_INT);
         $row = $this->single();
@@ -176,7 +173,7 @@ class DatabasePDO implements IDatabase
 
     public function getAverageRating($id)
     {
-        $this->query("SELECT COUNT(rating_number) as rating_num, FORMAT((SUM(rating_number) / COUNT(rating_number)),1) as average_rating FROM rating WHERE productid = $id GROUP BY (productid)"); 
+        $this->query("SELECT COUNT(rating_number) as rating_num, FORMAT((SUM(rating_number) / COUNT(rating_number)),1) as average_rating FROM rating WHERE productid = $id GROUP BY productid"); 
         $data = $this->single();
         return $data;
     }
@@ -269,6 +266,58 @@ class DatabasePDO implements IDatabase
         }
     }
 
+    public function getLastOrder($gebruikersId)
+    {
+        $this->query("SELECT bestellingid FROM bestelling WHERE gebruikerid=$gebruikersId ORDER BY bestellingid DESC LIMIT 1");
+        $row = $this->single();
+        $row = $row->bestellingid;
+        return $row;
+    }
+
+    public function getOrderDetails($gebruikersId, $lastOrder)
+    {
+        try
+        {
+            $this->query("
+            SELECT bestelling.bestellingid, bestelling.gebruikerid, bestelde_items.bestellingid, bestelde_items.productid, producten.productnaam, bestelde_items.productaantal, bestelde_items.productprijs
+            FROM bestelde_items
+            INNER JOIN bestelling ON bestelling.bestellingid=bestelde_items.bestellingid
+            INNER JOIN producten ON producten.productid=bestelde_items.productid
+            WHERE bestelling.gebruikerid=$gebruikersId AND bestelling.bestellingid=$lastOrder");
+    
+            $row = $this->resultSet();
+
+            return $row;
+
+        }
+        catch(Exception $e)
+        {
+            $this->error = $e->getMessage();
+            return $this->error;
+        }
+    }
+
+    public function getTotalPrice($gebruikersId, $lastOrder)
+    {
+        try
+        {
+            $this->query("SELECT bestelde_items.bestellingid, SUM(bestelde_items.productprijs * bestelde_items.productaantal) AS TOTAL 
+            FROM bestelde_items 
+            JOIN bestelling
+            ON bestelde_items.bestellingid = bestelling.bestellingid
+            WHERE bestelling.gebruikerid = $gebruikersId AND bestelling.bestellingid = $lastOrder");
+
+            $row = $this->single();
+            $total_price = $row->TOTAL;
+            return $total_price;
+        }
+        catch(Exception $e)
+        {
+            $this->error = $e->getMessage();
+            return $this->error;
+        }
+    }
+
     public function checkIfRated($prodID, $userID)
     {
         $this->query("SELECT rating_number FROM rating WHERE productid = $prodID AND gebruiker_id = $userID"); 
@@ -278,35 +327,66 @@ class DatabasePDO implements IDatabase
 
     public function getCountries()
     {
-        $this->query("SELECT * FROM countries ORDER BY name");
+        $this->query("SELECT * FROM countries ORDER BY id");
         $result = $this->resultSet();
 
         return $result;
     }
 
-    public function getStates($id)
+    public function getStates($id, $state = 0)
     {
-        $this->query("SELECT * FROM states WHERE country_id=$id");
+        $this->query("SELECT * FROM states WHERE country_id=$id ORDER BY id");
         $result = $this->resultSet();
 
-        echo "<option value=0 disabled selected>Please select your state</option>";
-
-        foreach ($result as $key)
+        if($state == 0)
         {
-        echo "<option value='$key->id'>$key->name</option>";
+            echo "<option value=0 disabled selected>Please select your state</option>";
         }
+        else
+        {
+            echo "<option value=0 disabled>Please select your state</option>";
+        }
+
+        foreach ($result as $row)
+        {
+            if($state == $row->id)
+            {
+                echo "<option value='" . $row->id . "' selected>" . $row->name ."</option>";
+            }
+            else
+            {
+                echo "<option value='" . $row->id . "'>" . $row->name ."</option>";
+            }
+
+        }
+
     }
 
-    public function getCities($id)
+    public function getCities($id, $city = 0)
     {
         $this->query("SELECT * FROM cities WHERE state_id=$id ORDER BY name");
         $result = $this->resultSet();
 
-        echo "<option value=0 disabled selected>Please select your city</option>";
-
-        foreach ($result as $key)
+        if($city == 0)
         {
-        echo "<option value='$key->id'>$key->name</option>";
+            echo "<option value=0 disabled selected>Please select your city</option>";
+        }
+        else
+        {
+            echo "<option value=0 disabled>Please select your city</option>";
+        }
+
+        foreach ($result as $row)
+        {
+            if($city == $row->id)
+            {
+                echo "<option value='" . $row->id . "' selected>" . $row->name ."</option>";
+            }
+            else
+            {
+                echo "<option value='" . $row->id . "'>" . $row->name ."</option>";
+            }
+
         }
 
     }

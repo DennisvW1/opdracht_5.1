@@ -42,31 +42,26 @@ class FormValidator
 
                 case "register":
                     $formFields = new FormInfo("register");
-                    $formFields = $formFields->getArrayNames();
-                    $this->fields = $formFields;
+                    
+                    $this->fields = $formFields->getArrayNames();;
 
-                    foreach($this->fields as $field)
-                    {
-                        if(!array_key_exists($field, $this->data))
-                        {
-                            Messages::setMessage("$field is not present in data","error");
-                            return;
-                        }
-                    }
                     // validate field names for register form
                     $this->validateName();
                     $this->validateEmailRegister();
                     $this->validatePasswordRegister();
                     $this->validatePasswordRepeat();
+                    $this->validateCountry();
+                    $this->validateState();
+                    $this->validateCity();
 
-                    $country = $this->db->getCountryName($this->data["country"]);
-                    $state = $this->db->getStateName($this->data["state"]);
-                    $city = $this->db->getCityName($this->data["city"]);
-
-                    $this->validated["country"] = $country->name;
-                    $this->validated["state"] = $state->name;
-                    $this->validated["city"] = $city->name;
-
+                    foreach($this->fields as $field)
+                    {
+                        if(!array_key_exists($field, $this->validated))
+                        {
+                            Messages::setMessage("$field is not present in data","error");
+                            return;
+                        }
+                    }
                     return $this->validated;
                     break;
 
@@ -222,6 +217,125 @@ class FormValidator
             {
                 $this->validated['all_ok'] = true;
                 $this->validated['password'] = $val;
+            }
+        }
+        return $this->validated;
+    }
+
+    private function validateCountry()
+    {
+
+        $val = (isset($this->data['country']) ? trim($this->data['country']) : "");
+        if(empty($val))
+        {
+            $this->addData('country', '* Please select your country');
+            $this->validated['all_ok'] = false;
+        }
+        else
+        {
+            if (!preg_match('/^[0-9]*$/', $val))
+            {
+                $this->addData('country', '* Country value can only be a number');
+                $this->validated['all_ok'] = false;
+            }
+            else
+            {
+                if($this->validated["all_ok"])
+                {
+                    $this->validated['all_ok'] = true;
+    
+                    $country = $this->db->getCountryName($val);
+                    $this->addData("country", $country->name);
+                }
+                else
+                {
+                    $this->addData("country", $val);
+                }
+            }
+        }
+        return $this->validated;
+    }
+
+    private function validateState()
+    {
+
+        $val = (isset($this->data['state']) ? trim($this->data['state']) : "");
+        if(empty($val))
+        {
+            if(str_starts_with($this->validated['country'] , "*"))
+            {
+            $this->addData('state', 0);
+            }
+            else
+            {
+                $this->addData("state", "* Please select your state");
+            }
+            $this->validated['all_ok'] = false;
+
+        }
+        else
+        {
+            if (!preg_match('/^[0-9]*$/', $val))
+            {
+                $this->addData('state', '* State value can only be a number');
+                $this->validated['all_ok'] = false;
+            }
+            else
+            {
+                if($this->validated['all_ok'])
+                {
+                    $this->validated['all_ok'] = true;
+
+                    $state = $this->db->getStateName($val);
+                    $this->addData("state", $state->name);
+                }
+                else
+                {
+                    $this->addData("state", $val);
+                }
+
+            }
+        }
+        return $this->validated;
+    }
+
+    private function validateCity()
+    {
+
+        $val = (isset($this->data['city']) ? trim($this->data['city']) : "");
+        if(empty($val))
+        {
+            if(str_starts_with($this->validated['country'] , "*") || str_starts_with($this->validated['state'] , "*"))
+            {
+                $this->addData("city", 0);
+            }
+            else
+            {
+                $this->addData("city", "* Please select your city");
+            }
+            $this->validated['all_ok'] = false;
+        }
+        else
+        {
+            if (!preg_match('/^[0-9]*$/', $val))
+            {
+                $this->addData('city', '* City value can only be a number');
+                $this->validated['all_ok'] = false;
+            }
+            else
+            {
+                if($this->validated["all_ok"])
+                {
+                    $this->validated['all_ok'] = true;
+    
+                    $city = $this->db->getCityName($val);
+                    $this->addData("city", $city->name);
+                }
+                else
+                {
+                    $this->addData("city", $val);
+                }
+
             }
         }
         return $this->validated;

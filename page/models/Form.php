@@ -49,17 +49,19 @@ class Form extends HtmlDoc
 
     private function getFormContent()
     {
+
+        
         foreach ($this->form_Array as $fieldname => $fieldinfo)
         {
             $current_value = (isset($this->arr_postresult[$fieldname]) ? $this->arr_postresult[$fieldname] : '');
-            echo "<div class='col'><label id='$fieldname-hidden' class='form-label' for='.$fieldname.'>".$fieldinfo['label'].'</label></div>';
+            echo "<div class='col'><label id='$fieldname-hidden' class='form-label' for='$fieldname'>".$fieldinfo['label'].'</label></div>';
             echo "<div class='col'><label class='form-label'></label></div>";
             echo "<div class='row'>";
             
             switch ($fieldinfo['type'])
             {
                 case "textarea" :
-                    if(isset($_POST[$fieldname]))
+                    if(isset($current_value))
                     {
                         echo "<div class='col'><textarea class='form-control' name=$fieldname placeholder='".$fieldinfo['placeholder']."'>$current_value</textarea></div>";
                         break;    
@@ -74,36 +76,23 @@ class Form extends HtmlDoc
                     if($fieldname == "country")
                     {
                         echo "<div class='col' id=$fieldname-div>
-                                <select id='country-select' name='country' form='form'>";
-                        if($fieldname == "country")
-                        {	
+                                <select id='country-select' name='country' style='display: block;'>";
                             $this->db = new DatabasePDO();
                             $result = $this->db->getCountries();
-                            echo "<option value=0 disabled selected>Please select country</option>";
+                            echo "<option value=0 selected disabled>Please select your country</option>";
                             foreach ($result as $row)
                             {
-                                if($current_value == $row->id)
-                                {
-                                    echo "<option value='" . $row->id . "' selected>" . $row->name ."</option>";
-                                }
-                                else
-                                {
-                                    echo "<option value='" . $row->id . "'>" . $row->name ."</option>";
-                                }
+                                echo "<option value='" . $row->id . "'>" . $row->name ."</option>";
                             }
-                        }
                         echo "</select></div>";
                         break;
                     }
                     else
                     {
                         echo "<div class='col' id=$fieldname>
-                                <select id='$fieldname-select' name='$fieldname' form='form'>";
-                        if (isset($fieldinfo["options_func"]))
-                        {	
-                            echo "<option value=0 selected>Select previous field first </option>";
-                        }
-                        echo "</select></div>";
+                                <select id='$fieldname-select' name='$fieldname'>
+                            <option value=0 selected>Select previous field first </option>
+                            </select></div>";
                         break;
                     }
                 default :
@@ -111,7 +100,6 @@ class Form extends HtmlDoc
                 {
                     echo "<div class='col'><input class='form-control' type='".$fieldinfo['type']."' name='".$fieldname."' placeholder='".$fieldinfo['placeholder']."' value='".$current_value."'></div>";
                     break;
-
                 }
                 else
                 {
@@ -123,34 +111,18 @@ class Form extends HtmlDoc
             echo "<div class='col'>";
             if(isset($_SESSION[$fieldname]) && str_starts_with($_SESSION[$fieldname], "*"))
             {
-            echo "<span class='alert alert-danger'>$_SESSION[$fieldname]</span>";
-            unset($_SESSION[$fieldname]);
+                echo "<span class='alert alert-danger'>$_SESSION[$fieldname]</span>";
+                unset($_SESSION[$fieldname]);
             }
-            echo "</div></div>";
-        }
-    }
-
-    private function getCountries($current_value = 0)
-    {
-        $this->db = new DatabasePDO();
-        $result = $this->db->getCountries();
-        echo "<option value=0 disabled selected>Please select country</option>";
-        foreach ($result as $row)
-        {
-            if($current_value == $row->id)
-            {
-                echo "<option value='" . $row->id . "' selected>" . $row->name ."</option>";
-            }
-            else
-            {
-                echo "<option value='" . $row->id . "'>" . $row->name ."</option>";
-            }
+                echo "</div></div>";
         }
     }
 
     private function closeForm()
     {
-        echo "<div class='row pt-3'><div class='col'><button class='btn btn-dark' type='submit' value='submit'>$this->submitValue</button>";
+        echo "<div class='row pt-3'><div class='col'>";
+        // echo "<button class='btn btn-dark' type='submit' value='submit'>$this->submitValue</button>";
+        echo "<input class='btn btn-dark' type='submit' value='$this->submitValue'></button>";
         echo "</div></div></form>";
     }
 }

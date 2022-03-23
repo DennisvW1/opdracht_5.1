@@ -98,6 +98,12 @@ class PageController extends Controller
                             Messages::setMessage("Registered successfully, you can login now!", "success");
                             Logging::LogCsv("User registered successfully", LogLevel::LOW);
                             // redirect to login page
+                            echo "<script>
+                            function clearSessionStorage()
+                            {
+                                sessionStorage.clear();
+                            }</script>";
+                            echo "<script>clearSessionStorage();</script>";
                             $this->response['page'] = "login";
                             break;
                         case "login":
@@ -114,6 +120,7 @@ class PageController extends Controller
                             // clear out the post array
                             $_POST = array();
                             // redirect to home page
+                            
                             $this->response['page'] = "home";
                             break;
                     }
@@ -134,7 +141,7 @@ class PageController extends Controller
                             Logging::LogCsv("Contact form failed name: ".$check['name']." Email: ".$check['email']." Message: ".$check['message'],LogLevel::LOW);                   
                             break;
                         case "register":
-                            $fieldname = array("name","email","password","passwordrepeat");
+                            $fieldname = array("name","email","password","passwordrepeat","country","state","city");
                             foreach ($fieldname as $fieldname)
                             {
                                     $_SESSION[$fieldname] = $check[$fieldname] ?? "";

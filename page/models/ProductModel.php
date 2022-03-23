@@ -1,5 +1,4 @@
 <?php
-require_once MODELROOT."Autoloader.php";
 
 class ProductModel
 {
@@ -28,10 +27,8 @@ class ProductModel
                         <div class='card-body'>
                             <div class='text-center'>
                                 <h4 class='card-title'>".ucfirst($product->productnaam)."</h4>
-                                <p class='card-text'>Price € " . $product->productprijs . "</p>";
-                                if(isset($_SESSION['user_name']))
-                                {
-                                    echo "
+                                <p class='card-text'>Price € " . $product->productprijs . "</p>
+
                                     <form class='rate' action='' method='POST'>
                                         <input type='radio' id='star5' name='rating' value='5' ". (($product->average_rating >= 5)?'checked=checked':'') .">
                                         <label for='star5'></label>
@@ -45,27 +42,7 @@ class ProductModel
                                         <label for='star1'></label>
                                         <input type='hidden' name='id' id='id' value='" . $product->productid . "'>
                                     </form>
-                                    ";
-                                }
-                                else
-                                {
-                                    echo "
-                                    <form class='rate' action='' method='POST'>
-                                        <input type='radio' id='star5' name='rating' value='5' ". (($product->average_rating >= 5)?'checked=checked':'') ." disabled>
-                                        <label for='star5'></label>
-                                        <input type='radio' id='star4' name='rating' value='4' ". (($product->average_rating >= 4)?'checked=checked':'') ." disabled>
-                                        <label for='star4'></label>
-                                        <input type='radio' id='star3' name='rating' value='3' ". (($product->average_rating >= 3)?'checked=checked':'') ." disabled>
-                                        <label for='star3'></label>
-                                        <input type='radio' id='star2' name='rating' value='2' ". (($product->average_rating >= 2)?'checked=checked':'') ." disabled>
-                                        <label for='star2'></label>
-                                        <input type='radio' id='star1' name='rating' value='1' ". (($product->average_rating >= 1)?'checked=checked':'') ." disabled>
-                                        <label for='star1'></label>
-                                    </form>
-                                    ";
-                                }
-                                
-                                echo "
+
                                 <br><br>
                                 <p class='overall-rating'>
                                     (Average Rating <span id='avgrat'>". $product->average_rating ."</span>
@@ -116,11 +93,5 @@ class ProductModel
             echo "No product was selected";
         }
 
-    if(isset($_POST['action']) && $_POST['action'] == "insert")
-    {
-        // Rating class
-        // $rate = new Rating("product", $_POST);
-        echo "succes!!!!";
-    }
     }
 }

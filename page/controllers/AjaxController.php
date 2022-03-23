@@ -2,6 +2,7 @@
 
 class AjaxController extends Controller
 {
+    protected $db;
 
     protected function getRequest()
     {
@@ -21,16 +22,7 @@ class AjaxController extends Controller
             switch ($this->request['ajax'])
             {
                 case "rating":
-                    print_r($_POST);
-                    if(isset($_POST["prodid"]))
-                    {
-                        $productID = $_POST["prodid"];
-                    }
-                    else
-                    {
-                        $productID = $_GET['id'];
-                    }
-
+                    $productID = $_GET['id'];
                     Logging::LogCsv("Rated product with ID: ".$productID." ",LogLeveL::LOW, "rating");
                     break;
             }
@@ -43,42 +35,30 @@ class AjaxController extends Controller
 
     protected function showResponse()
     {
+        $this->db = new DatabasePDO();
 
         switch($_POST['ajax'])
         {
             case "rating":
                 // Rating class
-                if(isset($_POST["prodid"]))
-                {
-                    $productID = $_POST["prodid"];
-                }
-                else
-                {
-                    $productID = $_GET['id'];
-                }
-
+                $productID = $_GET['id'];
                 $rate = new Rating($_POST, $productID);
                 $rate->productRating();
                 break;
-
             case "register":
                 if(isset($_POST["country_id"]))
                 {
-                    $this->db = new DatabasePDO();
                     $id = $_POST["country_id"];
-                    return $this->db->getStates($id);
+                    $state = (isset($_POST["state_id"]) ? $_POST["state_id"] : 0);
+                    return $this->db->getStates($id, $state);
                 }
                 else if(isset($_POST["state_id"]))
                 {
-                    $this->db = new DatabasePDO();
                     $id = $_POST["state_id"];
-                    return $this->db->getCities($id);
+                    $city = $_POST["city_id"];
+                    return $this->db->getCities($id, $city);
                 }
                 break;
-        }
-        if($_POST['ajax'] == "rating")
-        {
-
         }
     }
     

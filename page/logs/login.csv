@@ -22,3 +22,8 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,guest,0,"21-03-2022 12:37:06",login,"User login failed * Email cannot be empty",LogMsg-874133,0.03269
 "Low Urgency",127.0.0.1,guest,0,"21-03-2022 13:46:08",login,"User login failed * Email cannot be empty",LogMsg-652602,0.03085
 "Low Urgency",127.0.0.1,guest,0,"21-03-2022 13:46:27",login,"User login failed * Email cannot be empty",LogMsg-552557,0.03119
+"No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:09:20",login,"User logged in successfully",LogMsg-556155,0.02818
+"No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:18:06",login,"User logged in successfully",LogMsg-705280,0.03836
+"No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:20:34",login,"User logged in successfully",LogMsg-150142,0.0245
+"No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:36:09",login,"User logged in successfully",LogMsg-434953,0.0199
+"No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:52:13",login,"User logged in successfully",LogMsg-668500,0.02393
