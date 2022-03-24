@@ -22,7 +22,15 @@ class AjaxController extends Controller
             switch ($this->request['ajax'])
             {
                 case "rating":
-                    $productID = $_GET['id'];
+                    if(isset($_POST["product_id"]))
+                    {
+                        $productID = $_POST["product_id"];
+                    }
+                    else
+                    {
+                        $productID = $_GET['id'];
+                    }
+                    
                     Logging::LogCsv("Rated product with ID: ".$productID." ",LogLeveL::LOW, "rating");
                     break;
             }
@@ -41,7 +49,15 @@ class AjaxController extends Controller
         {
             case "rating":
                 // Rating class
-                $productID = $_GET['id'];
+                if(isset($_POST["product_id"]))
+                    {
+                        $productID = $_POST["product_id"];
+                    }
+                    else
+                    {
+                        $productID = $_GET['id'];
+                    }
+
                 $rate = new Rating($_POST, $productID);
                 $rate->productRating();
                 break;

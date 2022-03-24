@@ -2,7 +2,6 @@
 require_once MODELROOT."Autoloader.php";
 class PageController extends Controller
 {
-
     protected function showResponse()
     {
         $collection = new ElementCollection(); 
@@ -42,6 +41,7 @@ class PageController extends Controller
                 break;
             default:
                 $collection->addElement(new TextElement("home")); 
+                
         } 
         
         $collection->addElement(new Footer()); 

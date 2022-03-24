@@ -10,16 +10,8 @@ class TextElement extends HtmlDoc
     }
 
     public function showContent()
-    {     
-        switch ($this->type)
-        {
-            case "home":
-                echo $this->home();
-                break;
-            case "about":
-                echo $this->about();
-                break;
-        }
+    {   
+        call_user_func(array($this, $this->type));
     }
 
     private function home()
@@ -47,4 +39,5 @@ class TextElement extends HtmlDoc
                 Bij de carnavalsvereniging uit Renkum ben ik actief als lid van de Raad van Elf, daarnaast maak ik ieder jaar het boekje en beheer ik de <a href='https://www.dedolleinstuivers.nl' target='_new'>website</a>.</p>
                 </div></div>";
     }
-}
+
+}// end class

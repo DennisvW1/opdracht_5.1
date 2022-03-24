@@ -11,14 +11,14 @@ abstract class HtmlDoc implements IShowPage
         $this->endPage();
     }
     
-    // method om de pagina te starten
+    // method to start the html page
     private function startPage() 
     { 
         echo "<!DOCTYPE html>
                 <html>";
     } 
 
-    // method om de head op te bouwen
+    // method to create the head section
     private function startHead()
     {
         echo "<head>
@@ -33,7 +33,7 @@ abstract class HtmlDoc implements IShowPage
         </head>";
     }
 
-    // method om de body op te bouwen
+    // method to create the body section
     private function showBody()
     {
         echo "<body class='d-flex flex-column min-vh-100'>";
@@ -47,22 +47,12 @@ abstract class HtmlDoc implements IShowPage
         echo "</body>";
     }
 
-    // in deze method word de content aangeroepen, in de parent is die leeg
+    // method to show the content
     public function showContent()
     { 
     }
 
-    // method om de footer te maken
-    private function showFooter()
-    {
-        echo"<footer class='footer mt-auto py-3 bg-dark'>
-        <div class='container'>
-            <span class='text-muted'>&copy;".date("Y")."&nbsp;Dennis van Willigen</span>
-        </div>
-        </footer>";
-    }
-
-    // method om de pagina te sluiten
+    // method to close the html page
     private function endPage() 
     { 
         echo "</html>"; 

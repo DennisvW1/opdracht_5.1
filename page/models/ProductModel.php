@@ -28,21 +28,20 @@ class ProductModel
                             <div class='text-center'>
                                 <h4 class='card-title'>".ucfirst($product->productnaam)."</h4>
                                 <p class='card-text'>Price € " . $product->productprijs . "</p>
-
+                                        
                                     <form class='rate' action='' method='POST'>
-                                        <input type='radio' id='star5' name='rating' value='5' ". (($product->average_rating >= 5)?'checked=checked':'') .">
+                                        <input type='radio' id='star5' name='rating' value='5' ". (($product->average_rating >= 5)?'checked=checked':'') ." >                                                
                                         <label for='star5'></label>
-                                        <input type='radio' id='star4' name='rating' value='4' ". (($product->average_rating >= 4)?'checked=checked':'') .">
+                                        <input type='radio' id='star4' name='rating' value='4' ". (($product->average_rating >= 4)?'checked=checked':'') ." >
                                         <label for='star4'></label>
-                                        <input type='radio' id='star3' name='rating' value='3' ". (($product->average_rating >= 3)?'checked=checked':'') .">
+                                        <input type='radio' id='star3' name='rating' value='3' ". (($product->average_rating >= 3)?'checked=checked':'') ." >
                                         <label for='star3'></label>
-                                        <input type='radio' id='star2' name='rating' value='2' ". (($product->average_rating >= 2)?'checked=checked':'') .">
+                                        <input type='radio' id='star2' name='rating' value='2' ". (($product->average_rating >= 2)?'checked=checked':'') ." >
                                         <label for='star2'></label>
-                                        <input type='radio' id='star1' name='rating' value='1' ". (($product->average_rating >= 1)?'checked=checked':'') .">
+                                        <input type='radio' id='star1' name='rating' value='1' ". (($product->average_rating >= 1)?'checked=checked':'') ." >
                                         <label for='star1'></label>
-                                        <input type='hidden' name='id' id='id' value='" . $product->productid . "'>
                                     </form>
-
+                                    
                                 <br><br>
                                 <p class='overall-rating'>
                                     (Average Rating <span id='avgrat'>". $product->average_rating ."</span>

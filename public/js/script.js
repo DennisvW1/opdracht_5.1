@@ -3,11 +3,12 @@ $(function() {
 
     $('.rate input').on('click', function(e){
         e.preventDefault();
-        let ratingNum = $(this).val();
+        let ratingNum = $(this).data("value");
         let form = $('form');
-        url = form.attr('action');
+        let url = form.attr('action');
+        let prodid = $(this).data("id");
         let action = "rating";
-        postAjax(url, action, ratingNum);
+        postAjax(url, action, ratingNum, prodid);
     });
     
     let selCountry = (sessionStorage["selCountry"] > 0 ? sessionStorage["selCountry"] : 0);
@@ -58,25 +59,20 @@ $(function() {
         let cityId = (this).value;
         sessionStorage["selCity"] = cityId;
     });
-
-    function clearSessionStorage()
-    {
-        sessionStorage.clear();
-    }
 });
 
-function postAjax(url, action, ratingNum)
+function postAjax(url, action, ratingNum, prodid)
 {
     $.ajax({
         type: "POST",
         url: url,
-        data: {ajax: action, rating: ratingNum},
+        data: {ajax: action, rating: ratingNum, product_id: prodid},
         dataType: "json",
         success: function(resp) {
             if(resp.status == 1)
             {
-                $('#avgrat').text(resp.data.average_rating);
-                $('#totalrat').text(resp.data.rating_num);
+                $('.avgrat').text(resp.data.average_rating);
+                $('.totalrat').text(resp.data.rating_num);
                 alert("Thank you for rating this product!");
             }
             else if(resp.status == 2)
@@ -92,12 +88,13 @@ function postAjax(url, action, ratingNum)
                 if($(this).val() <= parseInt(resp.data.average_rating)){
                     $(this).attr('checked', 'checked');
                 }else{
-                    $(this).prop( 'checked', false );
-                }
+                    $(this).prop('checked', false);
+                }    
             });
         },
         error: function(resp){
-            console.log("Error: "+resp);
+            console.log("Error:");
+            console.log(resp);
         }
     });
 }

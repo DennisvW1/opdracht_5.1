@@ -161,7 +161,7 @@ class DatabasePDO implements IDatabase
 
     public function getRating($id)
     {
-        $this->query("SELECT p.*, COUNT(r.rating_number) as rating_num, FORMAT((SUM(r.rating_number) / COUNT(r.rating_number)),1) as average_rating 
+        $this->query("SELECT p.*, COUNT(r.rating_number) as rating_num, FORMAT((AVG(r.rating_number)),1) as average_rating 
                         FROM producten as p 
                         LEFT JOIN rating as r 
                         ON r.productid = p.productid 
@@ -169,6 +169,19 @@ class DatabasePDO implements IDatabase
                         GROUP BY (r.productid)"); 
         return $this->single();
         
+    }
+
+    public function getBestRatedProduct($amount)
+    {
+        $this->query("SELECT producten.productnaam, producten.productid, count(rating.productid) as aantal, avg(rating.rating_number) as avg
+        FROM producten
+        INNER JOIN rating ON rating.productid=producten.productid
+        GROUP BY producten.productnaam
+        ORDER BY avg 
+        DESC limit $amount");
+        $result = $this->resultSet();
+        
+        return $result;
     }
 
     public function getAverageRating($id)

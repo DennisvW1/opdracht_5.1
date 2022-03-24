@@ -26,7 +26,7 @@ class Admin
 
     private function buildMenu()
     {
-        $this->menuOptions = array("main", "sales", "change_name", "change_level");
+        $this->menuOptions = array("main", "sales", "change_level");
 
         echo "<nav class='navbar navbar-expand-md navbar-light bg-light'>
         <div class='container-fluid'>
@@ -37,10 +37,10 @@ class Admin
 
         foreach($this->menuOptions as $li)
         {
-            $li = str_replace('_', ' ', $li);
+            $page = str_replace('_', ' ', $li);
 
             echo "<li class='nav-item'>
-            <a class='nav-link' aria-current='page' href='index.php?page=admin&admin=$li'>" . ucfirst($li) . "</a>
+            <a class='nav-link' aria-current='page' href='index.php?page=admin&admin=$li'>" . ucfirst($page) . "</a>
             </li>";
         }
 
@@ -51,33 +51,57 @@ class Admin
 
     private function buildBody($page)
     {
-        $this->page = str_replace("_", " ", $this->page);
+        $page = str_replace("_", " ", $this->page);
         echo "
         <div class='mb-5 ml-5'>
-            <div class='h2 mr-5'>Admin Panel - ". ucfirst($this->page) ."</div>
+            <div class='h2 mr-5'>Admin Panel - ". ucfirst($page) ."</div>
                     <div class='row pt-2'>";
+                
+                    call_user_func(array($this, $this->page));
+                
                 //---------------
-                switch($this->page)
-                {
-                    case "main":
-                        echo "Main page for admin";
-                        break;
-                    case "change_name":
-                        echo "change name for a user here!";
-                        break;
-                    case "change_level":
-                        echo "change the level for a user here";
-                        break;
-                    case "sales":
-                        echo "check sales here";
-                        break;
-                    default: 
-                        echo "Main page for admin";
-                }
+                // switch($this->page)
+                // {
+                //     case "main":
+                //         echo "Main page for admin";
+                //         break;
+                //     case "change_name":
+                //         echo "change name for a user here!";
+                //         break;
+                //     case "change_level":
+                //         echo "change the level for a user here";
+                //         break;
+                //     case "sales":
+                //         $sales = new TextElement("sales");
+                //         $sales->showContent();
+                //         break;
+                //     default: 
+                //         echo "Main page for admin";
+                // }
                 //---------------
                 echo "
                 </div>
             </div>
         </div>";
+    }
+
+    private function main()
+    {
+        echo "Main page for admin";
+    }
+
+
+    private function change_level()
+    {
+        echo "change the level for a user here";
+    }
+
+    private function sales()
+    {
+        $this->page = new OverzichtModel("rating", 3);
+        $this->page->showContent();
+        echo "<hr>";
+        $this->page = new OverzichtModel("items", 3);
+        $this->page->showContent();
     }
 }

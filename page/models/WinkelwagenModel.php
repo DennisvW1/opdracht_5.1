@@ -12,16 +12,7 @@ class WinkelwagenModel
         $this->db = new DatabasePDO();
 
         try
-        {
-            // $this->db->query("SELECT id FROM gebruikers WHERE email=:email");
-            // $this->db->bind("email",$email);
-            // $row = $this->db->single();
-            
-            // $lastId = "SELECT bestellingid FROM bestelling WHERE gebruikerid=$this->gebruikersId ORDER BY bestellingid DESC LIMIT 1";
-            // $this->db->query($lastId);
-            // $row = $this->db->single();
-            // $this->lastorder = $row->bestellingid;
-            
+        {            
             $email = $_SESSION['user_email'];
             $this->gebruikersId = $this->db->getId($email);
             $this->lastorder = $this->db->getLastOrder($this->gebruikersId);
@@ -35,13 +26,6 @@ class WinkelwagenModel
 
     public function getOrderedDetails()
     {
-            // $sql = "SELECT bestelling.bestellingid, bestelling.gebruikerid, bestelde_items.bestellingid, bestelde_items.productid, producten.productnaam, bestelde_items.productaantal, bestelde_items.productprijs
-            //         FROM bestelde_items
-            //         INNER JOIN bestelling ON bestelling.bestellingid=bestelde_items.bestellingid
-            //         INNER JOIN producten ON producten.productid=bestelde_items.productid
-            //         WHERE bestelling.gebruikerid=$this->gebruikersId AND bestelling.bestellingid=$this->lastorder";
-            // $this->db->query($sql);
-            // $row = $this->db->resultSet();
             $row = $this->db->getOrderDetails($this->gebruikersId, $this->lastorder);
                     // unset the session details to clear the shopping cart
                     unset($_SESSION['cart']);
@@ -52,15 +36,6 @@ class WinkelwagenModel
 
     public function getOrderedTotalPrice()
     {
-            // $sql = "SELECT bestelde_items.bestellingid, SUM(bestelde_items.productprijs * bestelde_items.productaantal) AS TOTAL 
-            // FROM bestelde_items 
-            // JOIN bestelling
-            // ON bestelde_items.bestellingid = bestelling.bestellingid
-            // WHERE bestelling.gebruikerid = $this->gebruikersId AND bestelling.bestellingid=$this->lastorder";
-            // $this->db->query($sql);
-            // $row = $this->db->single();
-            // $total_price = $row->TOTAL;
-            // return $total_price;
             $total_price = $this->db->getTotalPrice($this->gebruikersId, $this->lastorder);
 
             return $total_price;

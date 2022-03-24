@@ -64,3 +64,13 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 13:02:48",product,"Rated product with ID: 1 ",LogMsg-238799,0.0192
 "Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:02:56",product,"Rated product with ID: 1 ",LogMsg-112524,0.01166
 "Low Urgency",127.0.0.1,guest,0,"22-03-2022 13:03:31",product,"Rated product with ID: 1 ",LogMsg-554241,0.04203
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 10:20:29",product,"Rated product with ID: 1 ",LogMsg-371925,0.01886
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 12:11:27",product,"Rated product with ID: 1 ",LogMsg-253720,0.03267
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 12:11:34",product,"Rated product with ID: 1 ",LogMsg-118271,0.01525
+"Low Urgency",::1,Dennis,4,"24-03-2022 12:48:59",product,"Rated product with ID: 3 ",LogMsg-621881,0.02442
+"Low Urgency",::1,Dennis,4,"24-03-2022 12:49:18",product,"Rated product with ID: 1 ",LogMsg-608857,0.01661
+"Low Urgency",::1,Dennis,4,"24-03-2022 12:49:20",product,"Rated product with ID: 1 ",LogMsg-571792,0.01651
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:01",product,"Rated product with ID: 1 ",LogMsg-523216,0.01994
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:02",product,"Rated product with ID: 1 ",LogMsg-583266,0.01333
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:05",product,"Rated product with ID: 2 ",LogMsg-314991,0.01124
+"Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:06",product,"Rated product with ID: 2 ",LogMsg-837778,0.01535

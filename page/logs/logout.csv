@@ -13,3 +13,10 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "No Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:49:51",logout,"User logged off successfully",LogMsg-454713,0.03464
 "No Urgency",127.0.0.1,Dennis,4,"22-03-2022 13:02:50",logout,"User logged off successfully",LogMsg-656170,0.02298
 "No Urgency",127.0.0.1,Dennis,4,"23-03-2022 13:53:34",logout,"User logged off successfully",LogMsg-978361,0.02216
+"No Urgency",127.0.0.1,Dennis,4,"24-03-2022 12:14:00",logout,"User logged off successfully",LogMsg-838315,0.03154
+"No Urgency",127.0.0.1,Dennis,4,"24-03-2022 12:28:16",logout,"User logged off successfully",LogMsg-439984,0.01836
+"No Urgency",::1,Dennis,4,"24-03-2022 12:51:14",logout,"User logged off successfully",LogMsg-960656,0.03562
+"No Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:17:23",logout,"User logged off successfully",LogMsg-543495,0.02239
+"No Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:26:35",logout,"User logged off successfully",LogMsg-711063,0.03561
+"No Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:59:49",logout,"User logged off successfully",LogMsg-594887,0.02629
+"No Urgency",127.0.0.1,Test,5,"24-03-2022 15:01:34",logout,"User logged off successfully",LogMsg-478529,0.0265

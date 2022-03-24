@@ -5,10 +5,10 @@
     define("DB_PASS","Panter15");
     define("DB_NAME","dennis_webshop");
 
-    define("ROOTURL","http://localhost/opdracht_4.3/");
-    define("CONTROLLERURL","http://localhost/opdracht_4.3/page/controllers");
-    define("PAGEURL", "http://localhost/opdracht_4.3/page");
-    define("MODELURL",  "http://localhost/opdracht_4.3/page/models");
+    define("ROOTURL","http://localhost/opdracht_5.1/");
+    define("CONTROLLERURL","http://localhost/opdracht_5.1/page/controllers");
+    define("PAGEURL", "http://localhost/opdracht_5.1/page");
+    define("MODELURL",  "http://localhost/opdracht_5.1/page/models");
 
     define("PAGEROOT",dirname(__FILE__));
     define("MODELROOT",dirname(__FILE__)."/models/");

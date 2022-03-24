@@ -159,3 +159,4 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber,TimeToLog
 "Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:53:07",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-798958,0.03903
 "Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:53:17",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-665315,0.0359
 "Low Urgency",127.0.0.1,guest,0,"23-03-2022 12:54:13",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-975772,0.03411
+"Low Urgency",127.0.0.1,guest,0,"24-03-2022 10:17:05",register,"Registering failed name: * Name cannot be empty Email: * Email cannot be empty",LogMsg-151819,0.02488
