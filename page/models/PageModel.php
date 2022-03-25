@@ -116,6 +116,18 @@ class PageModel extends HtmlDoc
                     $this->page->showContent();
                 }
                 break;
+            case "profile":
+                if(isset($_GET['profile']))
+                {
+                    $this->page = new Profile($_GET['profile']);
+                    $this->page->showContent();;
+                }
+                else
+                {
+                    $this->page = new Profile();
+                    $this->page->showContent();
+                }
+                break;
         }
     }
 }

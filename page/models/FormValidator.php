@@ -24,25 +24,19 @@ class FormValidator
             switch($this->data['page'])
             {
                 case "contact":
-                    $this->fields = ['name', 'email', 'message'];
-                    foreach($this->fields as $field)
-                    {
-                        if(!array_key_exists($field, $this->data))
-                        {
-                            Messages::setMessage("$field is not present in data","error");
-                            return;
-                        }
-                    }
                     // validate field names for contact form
                     $this->validateName();
                     $this->validateEmail();
                     $this->validateMessage();
-                    return $this->validated;
+
+                    if($this->checkFields($this->data['page']))
+                    {
+                        return $this->validated;
+                    }
                     break;
 
                 case "register":
                     $formFields = new FormInfo("register");
-                    
                     $this->fields = $formFields->getArrayNames();;
 
                     // validate field names for register form
@@ -54,36 +48,61 @@ class FormValidator
                     $this->validateState();
                     $this->validateCity();
 
-                    foreach($this->fields as $field)
+                    if($this->checkFields($this->data['page']))
                     {
-                        if(!array_key_exists($field, $this->validated))
-                        {
-                            Messages::setMessage("$field is not present in data","error");
-                            return;
-                        }
+                        return $this->validated;
                     }
-                    return $this->validated;
                     break;
-
                 case "login":
-                    $this->fields = ['email', 'password'];
-                    foreach($this->fields as $field)
-                    {
-                        if(!array_key_exists($field, $this->data))
-                        {
-                            Messages::setMessage("$field is not present in data","error");
-                            return;
-                        }
-                    }
                     // validate field names for login form
                     $this->validateEmailLogin();
                     $this->validatePasswordLogin();
-                    return $this->validated;
+                    if($this->checkFields($this->data['page']))
+                    {
+                        return $this->validated;
+                    }
+                    break;
+                case "password":
+                    $this->validatePasswordChange();
+                    $this->validatePasswordRepeat();
+
+                    if($this->checkFields($this->data['page']))
+                    {
+                        return $this->validated;
+                    }
+                    break;
+                case "location":
+                    $this->changeCountry();
+                    $this->validateState();
+                    $this->validateCity();
+
+                    if($this->checkFields($this->data['page']))
+                    {
+                        return $this->validated;
+                    }
                     break;
             }
 
         }
 
+    }
+
+    private function checkFields($form)
+    {
+        $formFields = new FormInfo($form);
+        $this->fields = $formFields->getArrayNames();;
+        foreach($this->fields as $field)
+        {
+            if(!array_key_exists($field, $this->validated))
+            {
+                Messages::setMessage("$field is not present in data","error");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 
     private function validateName()
@@ -218,6 +237,22 @@ class FormValidator
                 $this->validated['all_ok'] = true;
                 $this->validated['password'] = $val;
             }
+        }
+        return $this->validated;
+    }
+
+    private function validatePasswordChange()
+    {
+        $val = trim($this->data['password']);
+        if(empty($val))
+        {
+            $this->addData('password', '* Password cannot be empty');
+            $this->validated['all_ok'] = false;
+        }
+        else
+        {
+                $this->validated['all_ok'] = true;
+                $this->validated['password'] = $val;
         }
         return $this->validated;
     }
@@ -438,5 +473,31 @@ class FormValidator
         $result = $result->wachtwoord;
         
         return $result;
+    }
+
+    private function changeCountry()
+    {
+
+        $val = (isset($this->data['country']) ? trim($this->data['country']) : "");
+        if(empty($val))
+        {
+            $this->addData('country', '* Please select your country');
+            $this->validated['all_ok'] = false;
+        }
+        else
+        {
+            if (!preg_match('/^[0-9]*$/', $val))
+            {
+                $this->addData('country', '* Country value can only be a number');
+                $this->validated['all_ok'] = false;
+            }
+            else
+            {
+                    $this->validated['all_ok'] = true;
+                    $country = $this->db->getCountryName($val);
+                    $this->addData("country", $country->name);
+            }
+        }
+        return $this->validated;
     }
 }

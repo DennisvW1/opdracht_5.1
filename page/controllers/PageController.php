@@ -37,11 +37,19 @@ class PageController extends Controller
                 $collection->addElement(new PageModel("overview")); 
                 break;
             case "admin":
-                    $collection->addElement(new PageModel("admin")); 
+                $collection->addElement(new PageModel("admin")); 
                 break;
+            case "profile":
+                $collection->addElement(new PageModel("profile"));
+                break;
+            case "password":
+                $collection->addElement(new PageModel("profile"));
+                break; 
+            case "location":
+                $collection->addElement(new PageModel("profile"));
+                break; 
             default:
                 $collection->addElement(new TextElement("home")); 
-                
         } 
         
         $collection->addElement(new Footer()); 
@@ -123,6 +131,22 @@ class PageController extends Controller
                             
                             $this->response['page'] = "home";
                             break;
+                        case "password":
+                            $this->db->changePassword($check);
+                            Messages::setMessage("Password has been changed!","succes");
+                            $this->response['page'] = "home";
+                            break;
+
+                        case "location":
+                            $this->db->changeLocation($check);
+                            echo "<script>
+                            function clearSessionStorage()
+                            {
+                                sessionStorage.clear();
+                            }</script>";
+                            echo "<script>clearSessionStorage();</script>";
+                            $this->response['page'] = "home";
+                            break;
                     }
                 }
                 // -------------------------------- 
@@ -133,7 +157,8 @@ class PageController extends Controller
                     switch($this->request['page'])
                     {
                         case "contact":
-                            $fieldname = array("name","email","message");
+                            $form = new FormInfo("contact");
+                            $fieldname = $form->getArrayNames();
                             foreach ($fieldname as $fieldname)
                             {
                                     $_SESSION[$fieldname] = $check[$fieldname] ?? "";
@@ -141,7 +166,8 @@ class PageController extends Controller
                             Logging::LogCsv("Contact form failed name: ".$check['name']." Email: ".$check['email']." Message: ".$check['message'],LogLevel::LOW);                   
                             break;
                         case "register":
-                            $fieldname = array("name","email","password","passwordrepeat","country","state","city");
+                            $form = new FormInfo("register");
+                            $fieldname = $form->getArrayNames();
                             foreach ($fieldname as $fieldname)
                             {
                                     $_SESSION[$fieldname] = $check[$fieldname] ?? "";
@@ -149,12 +175,32 @@ class PageController extends Controller
                             Logging::LogCsv("Registering failed name: ".$check['name']." Email: ".$check['email'],LogLevel::LOW);                   
                             break;
                         case "login":
-                            $fieldname = array("email","password");
+                            $form = new FormInfo("login");
+                            $fieldname = $form->getArrayNames();
                             foreach ($fieldname as $fieldname)
                             {
                                     $_SESSION[$fieldname] = $check[$fieldname] ?? "";
                             }
                             Logging::LogCsv("User login failed ".$check['email'],LogLevel::LOW);
+                            break;
+                        case "password":
+                            $form = new FormInfo("password");
+                            $fieldname = $form->getArrayNames();
+                            foreach ($fieldname as $fieldname)
+                            {
+                                    $_SESSION[$fieldname] = $check[$fieldname] ?? "";
+                            }
+                            Logging::LogCsv("Changing password failed",LogLevel::MID);  
+                            break;
+                        case "location":
+                            $form = new FormInfo("location");
+                            $fieldname = $form->getArrayNames();
+
+                            foreach ($fieldname as $fieldname)
+                            {
+                                    $_SESSION[$fieldname] = $check[$fieldname] ?? "";
+                            }
+                            Logging::LogCsv("Changing location failed",LogLevel::LOW);  
                             break;
                     }
                 }
@@ -266,12 +312,10 @@ class PageController extends Controller
                 if(isset($_GET['admin']))
                 {
                     $pageReq['page'] = "admin";
-                    // $this->page = new Admin("change name");
-                    // $this->page->showContent();;
                 }
                 else
                 {
-                    $pageReq['page'] = 'webshop';
+                    $pageReq['page'] = 'main';
                 }
             }
          }

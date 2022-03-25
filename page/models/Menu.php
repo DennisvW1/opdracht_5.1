@@ -15,15 +15,15 @@ class Menu implements IShowPage
         {
             if($_SESSION["user_level"] == 3)
             {
-                $this->menu = array("home","about","contact","webshop","cart","best sold","admin","logout");
+                $this->menu = array("home","about","contact","webshop","cart","best sold","admin","profile","logout");
             }
             else if($_SESSION["user_level"] == 2)
             {
-                $this->menu = array("home","about","contact","webshop","cart","best sold","sales","logout");
+                $this->menu = array("home","about","contact","webshop","cart","best sold","sales","profile","logout");
             }
             else
             {
-                $this->menu = array("home","about","contact","webshop","cart","best sold","logout");
+                $this->menu = array("home","about","contact","webshop","cart","best sold","profile","logout");
             }
 
             return $this->menu;

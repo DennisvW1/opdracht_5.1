@@ -1,5 +1,6 @@
 $(function() {
     // localStorage.clear();
+    // sessionStorage.clear();
 
     $('.rate input').on('click', function(e){
         e.preventDefault();

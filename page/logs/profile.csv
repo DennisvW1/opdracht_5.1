@@ -1,0 +1,27 @@
+Type,IP,Name,ID,Time,Page,Message,LogNumber,TimeToLog
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:28:24",profile,"Changing password failed",LogMsg-701385,0.12046
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:34:26",profile,"Changing password failed",LogMsg-892317,0.03713
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:34:41",profile,"Changing password failed",LogMsg-587224,0.03775
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:35:33",profile,"Changing password failed",LogMsg-933397,0.02346
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:35:36",profile,"Changing password failed",LogMsg-181666,0.02332
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:35:36",profile,"Changing password failed",LogMsg-665232,0.02289
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:35:39",profile,"Changing password failed",LogMsg-736323,0.02344
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:36:33",profile,"Changing location failed",LogMsg-481884,0.05285
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:36:37",profile,"Changing password failed",LogMsg-472602,0.02347
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:36:39",profile,"Changing location failed",LogMsg-962483,0.03055
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:37:14",profile,"Changing location failed",LogMsg-741407,0.03156
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:37:26",profile,"Changing location failed",LogMsg-876902,0.02413
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:46:59",profile,"Changing location failed",LogMsg-165366,0.03418
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:47:02",profile,"Changing location failed",LogMsg-671985,0.02391
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:49:47",profile,"Changing password failed",LogMsg-640295,0.02589
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:50:21",profile,"Changing location failed",LogMsg-763355,0.018
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:50:52",profile,"Changing location failed",LogMsg-429662,0.01659
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:51:34",profile,"Changing location failed",LogMsg-883692,0.05935
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 08:59:59",profile,"Changing location failed",LogMsg-291326,0.04077
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:13:04",profile,"Changing location failed",LogMsg-386578,0.02752
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:13:10",profile,"Changing password failed",LogMsg-256105,0.01652
+"High Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:16:16",profile,"SQLSTATE[42S22]: Column not found: 1054 Unknown column '$2y$10$rHQrbypz' in 'field list'",LogMsg-741476,0.03216
+"High Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:17:03",profile,"SQLSTATE[42S22]: Column not found: 1054 Unknown column '$2y$10$exMZHWgMqVYVnIZ08PEKWOXVnQAqmG6nFoDqgDRgCtqQ6VanRxORu' in 'field list'",LogMsg-209625,0.01698
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:18:15",profile,"Changing password failed",LogMsg-414196,0.04825
+"High Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:18:18",profile,"SQLSTATE[42S22]: Column not found: 1054 Unknown column '$2y$10$ur9cgsqly46VmAXpUITynuazb1IUKb8X41JgRUbQLi4mR8kXfyzCq' in 'field list'",LogMsg-592486,0.02117
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:44:36",profile,"Changing location failed",LogMsg-339473,0.05589

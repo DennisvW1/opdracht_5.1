@@ -55,31 +55,9 @@ class Admin
         echo "
         <div class='mb-5 ml-5'>
             <div class='h2 mr-5'>Admin Panel - ". ucfirst($page) ."</div>
-                    <div class='row pt-2'>";
-                
+                <div class='row pt-2'>";
                     call_user_func(array($this, $this->page));
-                
-                //---------------
-                // switch($this->page)
-                // {
-                //     case "main":
-                //         echo "Main page for admin";
-                //         break;
-                //     case "change_name":
-                //         echo "change name for a user here!";
-                //         break;
-                //     case "change_level":
-                //         echo "change the level for a user here";
-                //         break;
-                //     case "sales":
-                //         $sales = new TextElement("sales");
-                //         $sales->showContent();
-                //         break;
-                //     default: 
-                //         echo "Main page for admin";
-                // }
-                //---------------
-                echo "
+        echo "
                 </div>
             </div>
         </div>";

@@ -92,6 +92,32 @@ class FormInfo
                                             "options_func" => "getCities"
                     ));
                 break;
+            case "password":
+                $this->formInfo = array(
+                    "password" 	=> array("type" => "password",
+                                            "label"=> "New password:",
+                                            "placeholder" => "Enter your new password",
+                                        ),
+                    "passwordrepeat" 	=> array("type" => "password",
+                                            "label"=> "Your password again:",
+                                            "placeholder" => "Repeat your new password",
+                                        ));
+                break;
+            case "location":
+                $this->formInfo = array(
+                    "country" 	=> array("type" => "select",
+                                            "label"=> "Country:",
+                                            "options_func" => "getCountries",
+                                        ),
+                    "state" 	=> array("type" => "select",
+                                            "label"=> "State:",
+                                            "options_func" => "getStates"
+                                        ),
+                    "city" 	=> array("type" => "select",
+                                            "label"=> "City:",
+                                            "options_func" => "getCities"
+                                    ));                
+                break;
         }
     }
 

@@ -37,3 +37,6 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "No Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:26:55",login,"User logged in successfully",LogMsg-914961,0.02372
 "No Urgency",127.0.0.1,Test,5,"24-03-2022 14:59:54",login,"User logged in successfully",LogMsg-572834,0.04732
 "No Urgency",127.0.0.1,Dennis,4,"24-03-2022 15:01:39",login,"User logged in successfully",LogMsg-594699,0.03957
+"No Urgency",127.0.0.1,Dennis,4,"25-03-2022 07:24:21",login,"User logged in successfully",LogMsg-148989,0.03876
+"No Urgency",127.0.0.1,Dennis,4,"25-03-2022 07:32:03",login,"User logged in successfully",LogMsg-111039,0.04056
+"No Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:20:21",login,"User logged in successfully",LogMsg-288428,0.02674

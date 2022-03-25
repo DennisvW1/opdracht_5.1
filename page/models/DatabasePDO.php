@@ -239,6 +239,47 @@ class DatabasePDO implements IDatabase
         }
     }
 
+    public function changePassword($check)
+    {
+        try
+        {
+            $id = $_SESSION['user_id'];
+            $option = array("cost", 5);
+            $password = password_hash($check['password'], PASSWORD_DEFAULT, $option);
+            $this->query("UPDATE gebruikers SET wachtwoord = :password WHERE id = :id");
+            $this->bind("password", $password);
+            $this->bind("id", $id);
+            $this->execute();
+        }
+        catch (Exception $e)
+        {
+            $this->error = $e->getMessage();
+            Logging::LogCsv($this->error, LogLevel::HIGH);
+            echo $this->error;
+        }
+    }
+
+    public function changeLocation($check)
+    {
+        try
+        {
+            $id = $_SESSION['user_id'];
+            $this->query("UPDATE gebruikers SET user_country=:country, user_state=:state, user_city=:city WHERE id=:id");
+            $this->bind("country",$check['country']);
+            $this->bind("state",$check['state']);
+            $this->bind("city",$check['city']);
+            $this->bind("id", $id);
+            $this->execute();
+        }
+
+        catch(Exception $e)
+        {
+            $this->error = $e->getMessage();
+            Logging::LogCsv($this->error, LogLevel::MID);
+            echo $this->error;
+        }
+    }
+
     public function insertCart()
     {
         $this->openTransaction();
@@ -422,6 +463,30 @@ class DatabasePDO implements IDatabase
     {
         $this->query("SELECT name FROM cities WHERE id = $id");
         $result = $this->single();
+        return $result;
+    }
+
+    public function getUserCountry($id)
+    {
+        $this->query("SELECT user_country FROM gebruikers WHERE id = $id");
+        $country = $this->single();
+        $result = $country->user_country;
+        return $result;
+    }
+
+    public function getUserState($id)
+    {
+        $this->query("SELECT user_state FROM gebruikers WHERE id = $id");
+        $state = $this->single();
+        $result = $state->user_state;
+        return $result;
+    }
+
+    public function getUserCity($id)
+    {
+        $this->query("SELECT user_city FROM gebruikers WHERE id = $id");
+        $city = $this->single();
+        $result = $city->user_city;
         return $result;
     }
 
