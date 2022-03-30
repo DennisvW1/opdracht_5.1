@@ -18,6 +18,14 @@ spl_autoload_register(function($className)
             require_once $file;
         }
     }
+    else if(str_contains($className, "View"))
+    {
+        $file = PAGEROOT."/views/". $className . ".php";
+        if (file_exists($file))
+        {
+            require_once $file;
+        }  
+    }
     else
     {
         $file = PAGEROOT."/models/". $className . ".php";

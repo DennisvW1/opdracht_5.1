@@ -25,3 +25,63 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber,TimeToLog
 "Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:18:15",profile,"Changing password failed",LogMsg-414196,0.04825
 "High Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:18:18",profile,"SQLSTATE[42S22]: Column not found: 1054 Unknown column '$2y$10$ur9cgsqly46VmAXpUITynuazb1IUKb8X41JgRUbQLi4mR8kXfyzCq' in 'field list'",LogMsg-592486,0.02117
 "Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:44:36",profile,"Changing location failed",LogMsg-339473,0.05589
+"Medium Urgency",127.0.0.1,Dennis,4,"25-03-2022 10:06:22",profile,"Changing password failed",LogMsg-362205,0.02641
+"Low Urgency",127.0.0.1,Dennis,4,"25-03-2022 10:06:24",profile,"Changing location failed",LogMsg-957045,0.04115
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:20:26",profile,"Location changed",LogMsg-462867,0.05909
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:22:43",profile,"Changing location failed",LogMsg-564278,0.06519
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:23:14",profile,"Location changed",LogMsg-372529,0.02516
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:26:20",profile,"Changing password failed",LogMsg-561626,0.02599
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:27:26",profile,"Changing location failed",LogMsg-611491,0.02261
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:27:37",profile,"Changing password failed",LogMsg-845467,0.02971
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:27:39",profile,"Changing location failed",LogMsg-910573,0.02118
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:28:17",profile,"Changing password failed",LogMsg-273301,0.01735
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:30:14",profile,"Changing location failed",LogMsg-977099,0.03069
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:31:00",profile,"Changing location failed",LogMsg-668555,0.04997
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:31:22",profile,"Changing location failed",LogMsg-976866,0.01672
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:32:51",profile,"Changing location failed",LogMsg-463195,0.02348
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:33:32",profile,"Changing location failed",LogMsg-858697,0.01613
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:33:36",profile,"Changing location failed",LogMsg-285231,0.01745
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:33:39",profile,"Changing password failed",LogMsg-843778,0.01946
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:35:14",profile,"Changing location failed",LogMsg-806861,0.02936
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:36:14",profile,"Changing location failed",LogMsg-127903,0.02687
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:38:15",profile,"Changing location failed",LogMsg-614879,0.03024
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:38:44",profile,"Changing password failed",LogMsg-768755,0.04386
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:38:50",profile,"Changing location failed",LogMsg-357593,0.03423
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:39:23",profile,"Changing location failed",LogMsg-474314,0.02817
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:39:25",profile,"Changing location failed",LogMsg-916974,0.01789
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:39:26",profile,"Changing location failed",LogMsg-409839,0.01693
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:39:26",profile,"Changing location failed",LogMsg-317732,0.01686
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:39:35",profile,"Changing location failed",LogMsg-669271,0.01703
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:40:42",profile,"Changing location failed",LogMsg-750593,0.02388
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:40:57",profile,"Location changed",LogMsg-369091,0.02568
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:47:36",profile,"Changing location failed",LogMsg-572372,0.02854
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:47:48",profile,"Changing location failed",LogMsg-793955,0.03285
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:47:50",profile,"Changing password failed",LogMsg-117505,0.01726
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:57:19",profile,"Changing location failed",LogMsg-987825,0.04156
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:57:33",profile,"Changing location failed",LogMsg-595266,0.02412
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:57:44",profile,"Changing location failed",LogMsg-872274,0.02562
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:58:05",profile,"Changing location failed",LogMsg-731805,0.01673
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 10:58:23",profile,"Changing location failed",LogMsg-651260,0.01662
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:15:01",profile,"Changing location failed",LogMsg-919973,0.02617
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:15:11",profile,"Changing location failed",LogMsg-193881,0.02431
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:15:15",profile,"Changing location failed",LogMsg-602913,0.01936
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:15:27",profile,"Changing location failed",LogMsg-291580,0.04543
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:16:16",profile,"Changing password failed",LogMsg-254161,0.0161
+"Medium Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:16:27",profile,"Changing password failed",LogMsg-936269,0.02069
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:16:29",profile,"Changing location failed",LogMsg-384263,0.01768
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 11:16:48",profile,"Changing location failed",LogMsg-108087,0.02124
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:43:12",profile,"Changing password failed",LogMsg-884118,0.03109
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:44:07",profile,"Changing password failed",LogMsg-360249,0.01724
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:44:16",profile,"Changing password failed",LogMsg-762575,0.01693
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:44:34",profile,"Changing location failed",LogMsg-769582,0.02528
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:44:34",profile,"Changing location failed",LogMsg-134452,0.01627
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:44:36",profile,"Changing password failed",LogMsg-625944,0.01634
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:25:48",profile,"Changing password failed",LogMsg-537583,0.03684
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:29:41",profile,"Changing password failed",LogMsg-430023,0.0311
+"Medium Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:29:56",profile,"Changing password failed",LogMsg-218767,0.02301
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:37:07",profile,"Location changed",LogMsg-863026,0.02648
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:37:48",profile,"Location changed",LogMsg-965095,0.01639
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:38:44",profile,"Password changed",LogMsg-195992,0.02766
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:39:00",profile,"Password changed",LogMsg-114997,0.01767
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:39:33",profile,"Password changed",LogMsg-748075,0.01729
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:39:36",profile,"Password changed",LogMsg-287146,0.01876

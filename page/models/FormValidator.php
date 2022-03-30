@@ -62,29 +62,33 @@ class FormValidator
                         return $this->validated;
                     }
                     break;
-                case "password":
-                    $this->validatePasswordChange();
-                    $this->validatePasswordRepeat();
+                case "profile":
+                    $this->addData("sub", $this->data["sub"]);
 
-                    if($this->checkFields($this->data['page']))
+                    if(array_key_exists("state", $this->data))
                     {
-                        return $this->validated;
+                        $this->changeCountry();
+                        $this->validateState();
+                        $this->validateCity();
+                        if($this->checkFields("location"))
+                        {
+                            return $this->validated;
+                        }
+                        break;
                     }
-                    break;
-                case "location":
-                    $this->changeCountry();
-                    $this->validateState();
-                    $this->validateCity();
+                    else if(array_key_exists("password", $this->data)) 
+                    {
+                        $this->validatePasswordChange();
+                        $this->validatePasswordRepeat();
 
-                    if($this->checkFields($this->data['page']))
-                    {
-                        return $this->validated;
+                        if($this->checkFields("password"))
+                        {
+                            return $this->validated;
+                        }
+                        break;
                     }
-                    break;
             }
-
         }
-
     }
 
     private function checkFields($form)

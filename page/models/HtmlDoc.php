@@ -1,7 +1,7 @@
 <?php
 require_once MODELROOT."Autoloader.php";
 // een abstracte basis class -> abstract zodat hiervan geen instantie aangeroepen kan worden
-abstract class HtmlDoc implements IShowPage
+abstract class HtmlDoc implements IShowContent
 {
     public function show()
     {

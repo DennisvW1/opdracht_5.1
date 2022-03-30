@@ -137,3 +137,37 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,guest,0,"25-03-2022 07:14:22",webshop,"Rated product with ID: 2 ",LogMsg-632793,0.03671
 "Low Urgency",127.0.0.1,guest,0,"25-03-2022 07:14:24",webshop,"Rated product with ID: 3 ",LogMsg-849365,0.0265
 "Low Urgency",127.0.0.1,guest,0,"25-03-2022 07:14:26",webshop,"Rated product with ID: 4 ",LogMsg-119883,0.03161
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:30",webshop,"Rated product with ID: 1 ",LogMsg-167954,0.03382
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:38",webshop,"Rated product with ID: 2 ",LogMsg-748137,0.03326
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:48",webshop,"Rated product with ID: 2 ",LogMsg-687623,0.02211
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:49",webshop,"Rated product with ID: 2 ",LogMsg-546051,0.01321
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:57",webshop,"Rated product with ID: 2 ",LogMsg-563638,0.01498
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:58",webshop,"Rated product with ID: 2 ",LogMsg-397402,0.02381
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:19:59",webshop,"Rated product with ID: 2 ",LogMsg-334266,0.01366
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:00",webshop,"Rated product with ID: 1 ",LogMsg-815683,0.01336
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:04",webshop,"Rated product with ID: 4 ",LogMsg-405863,0.01639
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:04",webshop,"Rated product with ID: 4 ",LogMsg-328607,0.0179
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:05",webshop,"Rated product with ID: 4 ",LogMsg-905997,0.01195
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:06",webshop,"Rated product with ID: 4 ",LogMsg-747081,0.01268
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:06",webshop,"Rated product with ID: 4 ",LogMsg-844472,0.01902
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:06",webshop,"Rated product with ID: 4 ",LogMsg-669371,0.01619
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:23",webshop,"Rated product with ID: 2 ",LogMsg-679169,0.01269
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:20:28",webshop,"Rated product with ID: 2 ",LogMsg-645600,0.02418
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:24:23",webshop,"Rated product with ID: 2 ",LogMsg-240092,0.02035
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:24:39",webshop,"Rated product with ID: 2 ",LogMsg-280955,0.02236
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:24:47",webshop,"Rated product with ID: 2 ",LogMsg-288071,0.01549
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:24:51",webshop,"Rated product with ID: 1 ",LogMsg-328148,0.01778
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:25:25",webshop,"Rated product with ID: 1 ",LogMsg-751851,0.02051
+"No Urgency",127.0.0.1,guest,0,"29-03-2022 08:26:24",webshop,Array,LogMsg-205117,0.01524
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:26:24",webshop,"Rated product with ID: 2 ",LogMsg-461159,0.04103
+"No Urgency",127.0.0.1,guest,0,"29-03-2022 08:29:40",webshop,"posted=1, ajax=rating",LogMsg-822702,0.01996
+"Low Urgency",127.0.0.1,guest,0,"29-03-2022 08:29:40",webshop,"Rated product with ID: 2 ",LogMsg-646764,0.01077
+"No Urgency",127.0.0.1,guest,0,"29-03-2022 08:30:04",webshop,"posted=0, page=webshop",LogMsg-391726,0.02286
+"No Urgency",127.0.0.1,guest,0,"29-03-2022 08:30:04",webshop,"posted=0, page=webshop",LogMsg-278989,0.01445
+"No Urgency",127.0.0.1,guest,0,"29-03-2022 08:30:06",webshop,"posted=0, page=webshop",LogMsg-801661,0.01621
+"No Urgency",127.0.0.1,guest,0,"29-03-2022 08:30:06",webshop,"posted=0, page=webshop",LogMsg-115543,0.01475
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:08:43",webshop,"Rated product with ID: 1 ",LogMsg-522161,0.02228
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:08:57",webshop,"Rated product with ID: 2 ",LogMsg-624794,0.0147
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:10:52",webshop,"Rated product with ID: 3 ",LogMsg-816418,0.02406
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:42:59",webshop,"Rated product with ID: 2 ",LogMsg-748762,0.05204
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:43:03",webshop,"Rated product with ID: 2 ",LogMsg-529558,0.01902

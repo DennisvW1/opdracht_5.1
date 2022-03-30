@@ -3,29 +3,29 @@
 interface IDatabase
 {
     // contstruct needed for database connection, so that connection is made upon instantiation
-    function __construct();
+    public function __construct();
 
-    function query($sql);
-    function bind($param, $value, $type = null);
-    function execute();
-    function resultSet();
-    function single();
-    function rowCount();
+    public function query($sql);
+    public function bind($param, $value, $type = null);
+    public function execute();
+    public function resultSet();
+    public function single();
+    public function rowCount();
     
     // transaction requirements
-    function openTransaction();
-    function commitTransaction();
-    function rollBackTransaction();
+    public function openTransaction();
+    public function commitTransaction();
+    public function rollBackTransaction();
     
     // specific methods
-    function lastInsertId();
-    function getAllProducts();
-    function getProduct($id);
-    function getSoldItems($amount);
-    function getRating($id);
-    function insertRating($prodID, $ratingNum, $userID, $userIP);
-    function insertContact($check);
-    function insertRegister($check);
+    public function lastInsertId();
+    public function getAllProducts();
+    public function getProduct($id);
+    public function getSoldItems($amount);
+    public function getRating($id);
+    public function insertRating($prodID, $ratingNum, $userID, $userIP);
+    public function insertContact($check);
+    public function insertRegister($check);
     public function insertCart();
     
 }

@@ -1,6 +1,6 @@
 <?php
 require_once MODELROOT."Autoloader.php";
-class Menu implements IShowPage
+class Menu implements IShowContent
 {
     private $menu;
     

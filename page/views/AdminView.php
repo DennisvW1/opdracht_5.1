@@ -1,22 +1,22 @@
 <?php
-require_once MODELROOT."Autoloader.php";
 
-class Admin
+class AdminView extends HtmlDoc
 {
-    protected $menuOptions;
-    private $page;
-
-    public function __construct($page = "main")
+    protected $page;
+    protected $data;
+    
+    public function __construct($data, $page = "main")
     {
+        $this->data = $data;
         $this->page = $page;
     }
 
     public function showContent()
     {
-        if($_SESSION['user_level'] > 1)
+        if(isset($_SESSION["user_level"]) && $_SESSION["user_level"] > 1)
         {
             $this->buildMenu();
-            $this->buildBody($this->page);
+            $this->buildBody();
         }
         else
         {
@@ -49,7 +49,7 @@ class Admin
             </nav>";
     }
 
-    private function buildBody($page)
+    private function buildBody()
     {
         $page = str_replace("_", " ", $this->page);
         echo "
@@ -76,10 +76,10 @@ class Admin
 
     private function sales()
     {
-        $this->page = new OverzichtModel("rating", 3);
+        $this->page = new OverviewView("rating", $this->data["rating"], $this->data["amount"]);
         $this->page->showContent();
         echo "<hr>";
-        $this->page = new OverzichtModel("items", 3);
+        $this->page = new OverviewView("items", $this->data["items"], $this->data["amount"]);
         $this->page->showContent();
     }
 }

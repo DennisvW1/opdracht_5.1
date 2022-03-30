@@ -2,5 +2,5 @@
 
 interface IController
 {
-    function showPage();
+    public function showPage();
 }

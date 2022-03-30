@@ -74,3 +74,16 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:02",product,"Rated product with ID: 1 ",LogMsg-583266,0.01333
 "Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:05",product,"Rated product with ID: 2 ",LogMsg-314991,0.01124
 "Low Urgency",127.0.0.1,Dennis,4,"24-03-2022 14:15:06",product,"Rated product with ID: 2 ",LogMsg-837778,0.01535
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:05:57",product,"Rated product with ID: 1 ",LogMsg-839715,0.05642
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:06:13",product,"Rated product with ID: 1 ",LogMsg-678819,0.01276
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:06:19",product,"Rated product with ID: 1 ",LogMsg-822323,0.01247
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:06:24",product,"Rated product with ID: 1 ",LogMsg-789690,0.01497
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:08:47",product,"Rated product with ID: 1 ",LogMsg-718644,0.01819
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:10:57",product,"Rated product with ID: 3 ",LogMsg-244215,0.02267
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:13:17",product,"Rated product with ID: 3 ",LogMsg-140961,0.02104
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:13:55",product,"Rated product with ID: 3 ",LogMsg-548192,0.0204
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:13:57",product,"Rated product with ID: 3 ",LogMsg-627072,0.01187
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:14:02",product,"Rated product with ID: 3 ",LogMsg-876984,0.01372
+"Low Urgency",127.0.0.1,Dennis,4,"29-03-2022 09:14:05",product,"Rated product with ID: 3 ",LogMsg-850838,0.01228
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 09:28:21",product,"Product sjaal added to cart",LogMsg-913382,0.02922
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:43:07",product,"Rated product with ID: 1 ",LogMsg-125072,0.03818

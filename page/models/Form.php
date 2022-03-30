@@ -3,7 +3,8 @@
 
 class Form extends HtmlDoc
 {
-    public $page;
+    protected $form;
+    protected $sub;
     protected $action;
     protected $method = "POST";
     protected $submitValue = "Submit";
@@ -13,9 +14,9 @@ class Form extends HtmlDoc
     // declare Array property
     protected $form_Array = array ();
 
-    public function __construct($page, $action, $method, $submitValue)
+    public function __construct($form, $action, $method, $submitValue)
     {
-        $this->page = $page;
+        $this->form = $form;        
         $this->action = $action;
         $this->method = $method;
         $this->submitValue = $submitValue;
@@ -33,17 +34,33 @@ class Form extends HtmlDoc
 
     private function getFormType()
     {
-        $info = new FormInfo($this->page);
+        $info = new FormInfo($this->form);
         $this->form_Array = $info->getFormInfo();
+
+        if($this->form == "location" )
+        {
+            $this->form = "profile";
+            $this->sub = "location";
+        }
+        else if($this->form == "password")
+        {
+            $this->form = "profile";
+            $this->sub = "password";
+        }
+
         return $this->form_Array;
     }
 
     private function startForm()
     {
         echo "<form action='$this->action' method='$this->method' id='form'>";
-        echo "<input type='hidden' name='page' value='$this->page'>";
+        echo "<input type='hidden' name='page' value='$this->form'>";
+        if(isset($this->sub))
+        {
+            echo "<input type='hidden' name='sub' value='$this->sub'>";
+        }
         echo "<div class='mb-3'>
-                <div class='h1'>".ucfirst($this->page)."</div>
+                <div class='h1'>".ucfirst($this->form)."</div>
                 <div class='row pt-3'>";
     }
 
@@ -121,7 +138,6 @@ class Form extends HtmlDoc
     private function closeForm()
     {
         echo "<div class='row pt-3'><div class='col'>";
-        // echo "<button class='btn btn-dark' type='submit' value='submit'>$this->submitValue</button>";
         echo "<input class='btn btn-dark' type='submit' value='$this->submitValue'></button>";
         echo "</div></div></form>";
     }

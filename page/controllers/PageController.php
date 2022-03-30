@@ -25,29 +25,60 @@ class PageController extends Controller
                 $collection->addElement(new Form("login","","POST","Login")); 
                 break;
             case "webshop":
-                $collection->addElement(new PageModel("webshop")); 
+                $data = new WebshopModel();
+                $data = $data->getContent();
+                $collection->addElement(new WebshopView($data));
                 break;
             case "product":
-                $collection->addElement(new PageModel("product")); 
+                $product = (isset($_GET['id']) ? $_GET['id'] : 0);
+                $data = new ProductModel($product);
+                $data->getContent();
+                $collection->addElement(new ProductView($data)); 
                 break;
             case "cart":
-                $collection->addElement(new PageModel("cart")); 
+                $data = new CartModel();
+                $data = $data->getContent();
+                $collection->addElement(new CartView($data)); 
                 break;
             case "best sold":
-                $collection->addElement(new PageModel("overview")); 
+                $data = new OverviewModel("items", 5);
+                $data = $data->getContent();
+                $collection->addElement(new OverviewView("items", $data, 5)); 
                 break;
             case "admin":
-                $collection->addElement(new PageModel("admin")); 
+                $sub = (isset($_GET['admin']) ? $_GET["admin"] : ""); 
+                $data = new AdminModel($_SESSION["user_id"]);
+                $data = $data->getContent();
+                if($sub > "")
+                {
+                    $collection->addElement(new AdminView($data, $sub)); 
+                }
+                else
+                {
+                    $collection->addElement(new AdminView($data)); 
+                }
                 break;
             case "profile":
-                $collection->addElement(new PageModel("profile"));
+                $sub = (isset($_GET['profile']) ? $_GET["profile"] : ""); 
+                $data = new ProfileModel($_SESSION["user_id"]);
+                $data = $data->getContent();
+                if($sub > "")
+                {
+                    $collection->addElement(new ProfileView($data, $sub)); 
+                }
+                else
+                {
+                    $collection->addElement(new ProfileView($data)); 
+                }
                 break;
             case "password":
-                $collection->addElement(new PageModel("profile"));
-                break; 
+                $data = new ProfileModel($_SESSION["user_id"]);
+                $collection->addElement(new ProfileView($data, "change_password")); 
+                break;
             case "location":
-                $collection->addElement(new PageModel("profile"));
-                break; 
+                $data = new ProfileModel($_SESSION["user_id"]);
+                $collection->addElement(new ProfileView($data, "change_location")); 
+                break;
             default:
                 $collection->addElement(new TextElement("home")); 
         } 
@@ -55,17 +86,7 @@ class PageController extends Controller
         $collection->addElement(new Footer()); 
         $collection->showElements();
     }
-
-    protected function getRequest()
-     {
-         $posted = ($_SERVER['REQUEST_METHOD']==='POST');
-         $this->request = 
-             [
-                 'posted'   => $posted,
-                 'page'     => $this->getRequestVar('page', $posted, 'home')    
-             ];
-     }
-     
+    
      protected function validateRequest()
      {
         $this->response = $this->request;
@@ -79,6 +100,7 @@ class PageController extends Controller
             $check = new FormValidator($_POST);
             $check = $check->validateForm();
             $this->db = new DatabasePDO();
+
             // ----------------------------
             // check if all_ok is set in the array
             // ----------------------------
@@ -131,23 +153,32 @@ class PageController extends Controller
                             
                             $this->response['page'] = "home";
                             break;
-                        case "password":
-                            $this->db->changePassword($check);
-                            Messages::setMessage("Password has been changed!","succes");
-                            $this->response['page'] = "home";
-                            break;
-
-                        case "location":
-                            $this->db->changeLocation($check);
-                            echo "<script>
-                            function clearSessionStorage()
-                            {
-                                sessionStorage.clear();
-                            }</script>";
-                            echo "<script>clearSessionStorage();</script>";
-                            $this->response['page'] = "home";
+                        case "profile":
+                                switch($check["sub"])
+                                {
+                                    case "location":
+                                        $this->db->changeLocation($check);
+                                        echo "<script>
+                                        function clearSessionStorage()
+                                        {
+                                            sessionStorage.clear();
+                                        }</script>";
+                                        echo "<script>clearSessionStorage();</script>";
+                                        Messages::setMessage("Location has been changed!","succes");
+                                        Logging::LogCsv("Location changed", LogLevel::LOW);
+                                        $this->response['page'] = "profile";
+                                        break;
+                                    case "password":
+                                        $this->db->changePassword($check);
+                                        Messages::setMessage("Password has been changed!","succes");
+                                        Logging::LogCsv("Password changed", LogLevel::LOW);
+                                        $_POST = array();
+                                        $this->response['page'] = "profile";
+                                        break;
+                                }
                             break;
                     }
+                    
                 }
                 // -------------------------------- 
                 // if the all_ok is false
@@ -183,25 +214,34 @@ class PageController extends Controller
                             }
                             Logging::LogCsv("User login failed ".$check['email'],LogLevel::LOW);
                             break;
-                        case "password":
-                            $form = new FormInfo("password");
-                            $fieldname = $form->getArrayNames();
-                            foreach ($fieldname as $fieldname)
+                        case "profile":
+
+                            if(array_key_exists("state", $check))
                             {
-                                    $_SESSION[$fieldname] = $check[$fieldname] ?? "";
-                            }
-                            Logging::LogCsv("Changing password failed",LogLevel::MID);  
-                            break;
-                        case "location":
-                            $form = new FormInfo("location");
+                                $form = new FormInfo("location");
                             $fieldname = $form->getArrayNames();
 
                             foreach ($fieldname as $fieldname)
                             {
                                     $_SESSION[$fieldname] = $check[$fieldname] ?? "";
                             }
-                            Logging::LogCsv("Changing location failed",LogLevel::LOW);  
+                            Logging::LogCsv("Changing location failed",LogLevel::LOW);
+
+                            $this->response['page'] = 'location'; 
                             break;
+                            }
+                            else if(array_key_exists("password", $check))
+                            {
+                            $form = new FormInfo("password");
+                            $fieldname = $form->getArrayNames();
+                            foreach ($fieldname as $fieldname)
+                            {
+                                    $_SESSION[$fieldname] = $check[$fieldname] ?? "";
+                            }
+                            Logging::LogCsv("Changing password failed",LogLevel::MID);
+                            $this->response['page'] = 'password'; 
+                            break;
+                            }
                     }
                 }
             }
@@ -296,35 +336,10 @@ class PageController extends Controller
                 session_unset();
                 session_destroy();
                 Messages::setMessage("Logged off successfully, see you soon!", "success");
-
                 $this->response['page'] = "home";
                 break;
-            case "product":
-                if(isset($_GET['id']))
-				{
-					$pageReq['page'] = 'product';
-				}
-				else
-				{
-					$pageReq['page'] = 'webshop';
-				}
-            case "admin":
-                if(isset($_GET['admin']))
-                {
-                    $pageReq['page'] = "admin";
-                }
-                else
-                {
-                    $pageReq['page'] = 'main';
-                }
             }
          }
      }
 
-     protected function getRequestVar(string $key, bool $frompost, $default="", bool $asnumber=FALSE)
-     {
-         $filter = $asnumber ? FILTER_SANITIZE_NUMBER_FLOAT : FILTER_DEFAULT;
-         $result = filter_input(($frompost ? INPUT_POST : INPUT_GET), $key, $filter);
-         return ($result===FALSE) ? $default : $result;
-     }
 }

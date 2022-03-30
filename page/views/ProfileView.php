@@ -1,16 +1,15 @@
 <?php
 
-class Profile extends HtmlDoc
+class ProfileView extends HtmlDoc
 {
-    protected $menuOptions;
-    protected $user;
-    protected $page;
-    protected $db;
 
-    public function __construct($page = "main")
+    protected $page;
+    protected $data;
+
+    public function __construct($data, $page = "main")
     {
+        $this->data = $data;
         $this->page = $page;
-        $this->db = new DatabasePDO();
     }
 
     public function showContent()
@@ -27,7 +26,7 @@ class Profile extends HtmlDoc
 
     private function buildMenu()
     {
-        $this->menuOptions = array("main", "password", "location");
+        $this->menuOptions = array("main", "change_password", "change_location");
 
         echo "<nav class='navbar navbar-expand-md navbar-light bg-light'>
         <div class='container-fluid'>
@@ -52,7 +51,6 @@ class Profile extends HtmlDoc
 
     private function buildBody()
     {
-        $page = str_replace("_", " ", $this->page);
         echo "
         <div class='mb-5 ml-5'>
                 <div class='row pt-2'>";
@@ -68,24 +66,24 @@ class Profile extends HtmlDoc
         echo "<div>
                 <div class='row h1'>
                     <div class='col'>
-                    ".$_SESSION["user_name"]."'s profile page
+                    ".$this->data["user_name"]."'s profile page
                     </div>
                 </div>
                 <br>
                 <div class='row'>
                     <div class='col'>
-                        Name: ".$_SESSION['user_name']."
+                        Name: ".$this->data["user_name"]."
                         <div class='col'>
-                            Email: ".$_SESSION['user_email']."
+                            Email: ".$this->data["user_email"]."
                         </div>
                             <div class='col'>
-                                Country: ".$this->db->getUserCountry($_SESSION['user_id'])."
+                                Country: ".$this->data["country"]."
                             </div>
                                 <div class='col'>
-                                    State: ".$this->db->getUserState($_SESSION['user_id'])."
+                                    State: ".$this->data["state"]."
                                 </div>
                                     <div class='col'>
-                                        City: ".$this->db->getUserCity($_SESSION['user_id'])."
+                                        City: ".$this->data["city"]."
                                     </div>
                     </div>
                 </div>
@@ -93,7 +91,7 @@ class Profile extends HtmlDoc
             </div>";
     }
     
-    private function password()
+    private function change_password()
     {
         echo "<div>";
         $form = new Form("password","","POST","Change details");
@@ -101,11 +99,12 @@ class Profile extends HtmlDoc
         echo "</div>";
     }
 
-    private function location()
+    private function change_location()
     {
         echo "<div>";
         $form = new Form("location","","POST","Change details");
         $form->showContent();
         echo "</div>";
     }
+
 }

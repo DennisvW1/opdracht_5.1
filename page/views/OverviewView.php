@@ -1,35 +1,34 @@
 <?php
-require_once MODELROOT."Autoloader.php";
-class OverzichtModel
+
+class OverviewView extends HtmlDoc
 {
+    protected $toShow;
+    protected $data;
+    protected $amount;
 
-    protected $model;
-    protected $insert;
-
-    public function __construct($model, $insert)
+    public function __construct($toShow, $data, $amount)
     {
-        $this->model = $model;
-        $this->insert = $insert;
+        $this->toShow = $toShow;
+        $this->data = $data;
+        $this->amount = $amount;
     }
 
     public function showContent()
     {
-        switch($this->model)
+        switch($this->toShow)
         {
             case "items":
-                    $this->overviewSoldItems($this->insert);
+                $this->showItems();
                 break;
             case "rating":
-                	$this->overviewRating($this->insert);
+                $this->showRating();
                 break;
         }
     }
 
-    protected function overviewSoldItems()
+    protected function showItems()
     {
-        $result = new DatabasePDO();
-        $data = $result->getSoldItems($this->insert);
-        if(empty($data))
+        if(empty($this->data))
         {
             echo "<div class='h3'>Er is nog geen bestelling gedaan..</div>";
         }
@@ -37,13 +36,13 @@ class OverzichtModel
         {
             echo "<div class='col mb-5'>
             <div class='row'>";
-            if($this->insert == 1)
+            if($this->amount == 0)
             {
                 echo "<div class='col h1 text-center text-body'>Most sold item</div>";
             }
             else
             {
-                echo "<div class='col h1 text-center text-body'>Top $this->insert of most sold items</div>";
+                echo "<div class='col h1 text-center text-body'>Top $this->amount of most sold items</div>";
             }
             echo "</div> 
             <div class='row mt-3'>
@@ -58,7 +57,7 @@ class OverzichtModel
                 <div class='col'></div>
             </div>
             ";
-            foreach($data as $row)
+            foreach($this->data as $row)
             {
                 echo "<div class='row mt-2'>
                 <div class='col'></div>
@@ -76,12 +75,9 @@ class OverzichtModel
         }
     }
 
-    protected function overviewRating()
+    protected function showRating()
     {
-        $result = new DatabasePDO();
-        $data = $result->getBestRatedProduct($this->insert);
-
-        if(empty($data))
+        if(empty($this->data))
         {
             echo "<div class='h3'>No product has been rated yet..</div>";
         }
@@ -89,42 +85,54 @@ class OverzichtModel
         {
             echo "<div class='col mb-5'>
             <div class='row'>";
-            if($this->insert == 1)
+            if($this->amount == 1)
             {
                 echo "<div class='col h1 text-center text-body'>Best rated item</div>";
             }
             else
             {
-                echo "<div class='col h1 text-center text-body'>Top $this->insert of top rated items</div>";
+                echo "<div class='col h1 text-center text-body'>Top $this->amount of top rated items</div>";
             }
             echo "</div> 
             <div class='row mt-3'>
                 <div class='col'></div>
                 <div class='col'></div>
-                <div class='col'></div>
-                <div class='col'></div>
+
                 <div class='col'>Product</div>
                 <div class='col'>Rating</div>
                 <div class='col'></div>
-                <div class='col'></div>
-                <div class='col'></div>
+
             </div>
             ";
-            foreach($data as $row)
+            foreach($this->data as $row)
             {
                 echo "<div class='row mt-2'>
                 <div class='col'></div>
-                <div class='col'></div>
-                <div class='col'></div>
+
                 <div class='col'><img src='images/" . $row->productnaam . ".png' width=50 height=40 /></div>
                 <div class='col'><a href=index.php?page=product&id=" . $row->productid . ">".$row->productnaam."</a></div>
-                <div class='col'>". $row->avg."</div>
+                <div class='col'>
+                
+                <form class='rateShop' action='' method='POST'>
+                    <input type='radio' id='star5' ". (($row->avg >= 5)?'checked=checked':'') .">
+                    <label for='star5'></label>
+                    <input type='radio' id='star4' ". (($row->avg >= 4)?'checked=checked':'') .">
+                    <label for='star4'></label>
+                    <input type='radio' id='star3' ". (($row->avg >= 3)?'checked=checked':'') .">
+                    <label for='star3'></label>
+                    <input type='radio' id='star2' ". (($row->avg >= 2)?'checked=checked':'') .">
+                    <label for='star2'></label>
+                    <input type='radio' id='star1' ". (($row->avg >= 1)?'checked=checked':'') .">
+                    <label for='star1'></label>
+                </form>
+                
+                </div>
                 <div class='col'></div>
-                <div class='col'></div>
-                <div class='col'></div>
+
                 </div>";
             }
             echo "</div>";
         }
     }
+
 }

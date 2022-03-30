@@ -48,7 +48,6 @@ class AjaxController extends Controller
         switch($_POST['ajax'])
         {
             case "rating":
-                // Rating class
                 if(isset($_POST["product_id"]))
                     {
                         $productID = $_POST["product_id"];
@@ -77,12 +76,6 @@ class AjaxController extends Controller
                 break;
         }
     }
-    
-    protected function getRequestVar(string $key, bool $frompost, $default="", bool $asnumber=FALSE)
-    {
-        $filter = $asnumber ? FILTER_SANITIZE_NUMBER_FLOAT : FILTER_DEFAULT;
-        $result = filter_input(($frompost ? INPUT_POST : INPUT_GET), $key, $filter);
-        return ($result===FALSE) ? $default : $result;
-    }
+
 }
 

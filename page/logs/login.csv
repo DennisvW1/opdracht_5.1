@@ -40,3 +40,10 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "No Urgency",127.0.0.1,Dennis,4,"25-03-2022 07:24:21",login,"User logged in successfully",LogMsg-148989,0.03876
 "No Urgency",127.0.0.1,Dennis,4,"25-03-2022 07:32:03",login,"User logged in successfully",LogMsg-111039,0.04056
 "No Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:20:21",login,"User logged in successfully",LogMsg-288428,0.02674
+"No Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:50:56",login,"User logged in successfully",LogMsg-701124,0.02489
+"Low Urgency",127.0.0.1,guest,0,"25-03-2022 09:51:00",login,"User login failed dennis.vanwilligen@gmail.com",LogMsg-487689,0.0171
+"No Urgency",127.0.0.1,Dennis,4,"25-03-2022 09:51:06",login,"User logged in successfully",LogMsg-289858,0.01971
+"No Urgency",127.0.0.1,Dennis,4,"29-03-2022 08:37:23",login,"User logged in successfully",LogMsg-527217,0.02674
+"No Urgency",127.0.0.1,Dennis,4,"30-03-2022 08:14:49",login,"User logged in successfully",LogMsg-690305,0.02968
+"No Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:18:54",login,"User logged in successfully",LogMsg-889790,0.03853
+"No Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:38:54",login,"User logged in successfully",LogMsg-777634,0.02558

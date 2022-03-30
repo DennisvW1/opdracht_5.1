@@ -50,3 +50,20 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:23:16",cart,"Product strijkembleem added to cart",LogMsg-270056,0.04275
 "Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:23:19",cart,"Amount changed in cart for strijkembleem to 2",LogMsg-427137,0.01549
 "Low Urgency",127.0.0.1,Dennis,4,"22-03-2022 12:23:19",cart,"Order successfully placed",LogMsg-863264,0.01691
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 08:52:48",cart,"Product sjaal added to cart",LogMsg-788438,0.02552
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 09:29:31",cart,"Product sjaal added to cart",LogMsg-830607,0.03009
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 09:41:22",cart,"Order successfully placed",LogMsg-679442,0.03031
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 09:41:38",cart,"Order successfully placed",LogMsg-665638,0.01858
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:15:53",cart,"Product pin added to cart",LogMsg-193376,0.02794
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:17:11",cart,"Product strijkembleem added to cart",LogMsg-861103,0.01636
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:17:28",cart,"Product pin added to cart",LogMsg-858631,0.01611
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:17:54",cart,"Product pin added to cart",LogMsg-664683,0.02512
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:18:56",cart,"Product pin added to cart",LogMsg-183249,0.02708
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:19:30",cart,"Order successfully placed",LogMsg-408277,0.0175
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:19:39",cart,"Order successfully placed",LogMsg-611178,0.01972
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:19:59",cart,"Product strijkembleem added to cart",LogMsg-608886,0.02786
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:20:15",cart,"Product strijkembleem added to cart",LogMsg-527578,0.02875
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:20:18",cart,"Amount changed in cart for strijkembleem to 2",LogMsg-375382,0.0164
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:20:21",cart,"Order successfully placed",LogMsg-645248,0.02244
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:20:27",cart,"Product pin added to cart",LogMsg-294258,0.01684
+"No Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:21:06",cart,"Item deleted from cart pin",LogMsg-974967,0.02761

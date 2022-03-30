@@ -1,6 +1,6 @@
 <?php
-require_once MODELROOT."Autoloader.php";
-class Footer implements IShowPage
+
+class Footer implements IShowContent
 {
     public function showContent()
     {

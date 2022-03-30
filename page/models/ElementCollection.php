@@ -17,7 +17,7 @@ class ElementCollection
 			{
 				$element->show();
 			}
-			elseif ($element instanceof IShowPage)
+			elseif ($element instanceof IShowContent)
 			{	
 				$element->showContent();
 			}  

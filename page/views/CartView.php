@@ -1,49 +1,40 @@
 <?php
-require_once MODELROOT."Autoloader.php";
-    
-class WinkelwagenModel
+
+class CartView extends HtmlDoc
 {
-    private $gebruikersId;
-    private $lastorder;
-    private $db;
+    protected $data;
+    protected $total_price;
+    protected $orderDetails;
 
-    public function __construct()
+    public function __construct($data)
     {
-        $this->db = new DatabasePDO();
+        $this->data = $data;
+    }
 
-        try
-        {            
-            $email = $_SESSION['user_email'];
-            $this->gebruikersId = $this->db->getId($email);
-            $this->lastorder = $this->db->getLastOrder($this->gebruikersId);
-        }
-        catch(PDOException $e)
+    public function showContent()
+    {
+        if(!isset($_SESSION['cart']) || empty($_SESSION['cart']))
         {
-            Messages::setMessage($e, "error");
+            echo "No items have been placed in your shopping cart yet, please fill the shopping cart in the <a href='index.php?page=webshop' class='alert-link'>webshop!</a>";
         }
-
+        else
+        {
+            if(!isset($_SESSION['checkout_success']))
+            {
+                $this->showCart();
+            }
+            else
+            {
+                $this->showCheckout();
+                unset($_SESSION["cart"]);
+                unset($_SESSION["checkout_success"]);
+            }
+        }
     }
 
-    public function getOrderedDetails()
+    protected function showCart()
     {
-            $row = $this->db->getOrderDetails($this->gebruikersId, $this->lastorder);
-                    // unset the session details to clear the shopping cart
-                    unset($_SESSION['cart']);
-                    unset($_SESSION['checkout_success']);
-            return $row;
-
-    }
-
-    public function getOrderedTotalPrice()
-    {
-            $total_price = $this->db->getTotalPrice($this->gebruikersId, $this->lastorder);
-
-            return $total_price;
-    }
-
-    public function showCart()
-    {
-        $total_price = $total_price ?? 0;
+        $total_price = $this->total_price ?? 0;
 
         echo "
         <div class='mb-3'>
@@ -127,12 +118,11 @@ class WinkelwagenModel
 
     public function showCheckout()
     {
-
-            echo "<div class='mt-3'>
+        echo "<div class='mt-3'>
                     <div class='h2 text-success text-center'>Bestelling geslaagd!</div>
                 </div>";
-            $total_price = $this->getOrderedTotalPrice();
-            $row = $this->getOrderedDetails();
+            $total_price = $this->data["total_price"];
+            $row = $this->data["orderDetails"];
             foreach($row as $row){
                 echo "
                 <div class='mb-3'>
