@@ -12,6 +12,11 @@ class MainController extends Controller
             $controller = new AjaxController();
             $controller->showPage();
         }
+        else if(isset($_GET['type']) && $_GET['page'] == "api")
+        {
+            $controller = new ApiController();
+            $controller->showPage();
+        }
         else
         {
             $controller = new PageController();

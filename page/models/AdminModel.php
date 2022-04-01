@@ -17,9 +17,11 @@ class AdminModel
     public function getContent()
     {
         $this->amount = 3;
+        $this->sold = 14;
         $this->data["amount"] = $this->amount;
         $this->data["items"] = $this->db->getSoldItems($this->amount);
         $this->data["rating"] = $this->db->getBestRatedProduct($this->amount);
+        $this->data["lastDays"] = $this->db->orderedInLastDays($this->sold);
         return $this->data;
     }
 }

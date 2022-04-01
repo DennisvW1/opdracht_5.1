@@ -79,6 +79,9 @@ class PageController extends Controller
                 $data = new ProfileModel($_SESSION["user_id"]);
                 $collection->addElement(new ProfileView($data, "change_location")); 
                 break;
+            case "api":
+                $collection->addElement(new ApiView());
+                break;
             default:
                 $collection->addElement(new TextElement("home")); 
         } 

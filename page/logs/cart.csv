@@ -67,3 +67,13 @@ Type,IP,Name,ID,Time,Page,Message,LogNumber
 "Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:20:21",cart,"Order successfully placed",LogMsg-645248,0.02244
 "Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 10:20:27",cart,"Product pin added to cart",LogMsg-294258,0.01684
 "No Urgency",127.0.0.1,Dennis,4,"30-03-2022 11:21:06",cart,"Item deleted from cart pin",LogMsg-974967,0.02761
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 13:05:59",cart,"Product sjaal added to cart",LogMsg-336725,0.03755
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 13:06:01",cart,"Product strijkembleem added to cart",LogMsg-344027,0.02036
+"Low Urgency",127.0.0.1,Dennis,4,"30-03-2022 13:06:06",cart,"Order successfully placed",LogMsg-614264,0.01789
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:29:58",cart,"Product sjaal added to cart",LogMsg-907654,0.03297
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:29:58",cart,"Product pin added to cart",LogMsg-949714,0.01583
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:29:59",cart,"Product strijkembleem added to cart",LogMsg-531185,0.01557
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:30:02",cart,"Amount changed in cart for pin to 2",LogMsg-676390,0.02149
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:30:04",cart,"Amount changed in cart for sjaal to 4",LogMsg-951661,0.01496
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:30:05",cart,"Amount changed in cart for strijkembleem to 5",LogMsg-976374,0.02179
+"Low Urgency",127.0.0.1,Dennis,4,"31-03-2022 08:30:06",cart,"Order successfully placed",LogMsg-323715,0.01948

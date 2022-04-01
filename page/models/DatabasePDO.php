@@ -348,6 +348,14 @@ class DatabasePDO implements IDatabase
         return $result;
     }
 
+    public function getLimitProducts($limit)
+    {
+        $this->query("SELECT * FROM producten LIMIT $limit");
+        $result = $this->resultSet();
+
+        return $result;
+    }
+
     public function getSoldItems($amount)
     {
         $this->query("SELECT producten.productnaam, producten.productid, sum(bestelde_items.productaantal) as sum
@@ -509,6 +517,26 @@ class DatabasePDO implements IDatabase
         return $this->rowCount();
     }
 
+    public function orderedInLastDays($days)
+    {
+        $this->query("SELECT b.bestellingdatum, g.id, g.naam, b.bestellingid, p.productid, p.productnaam, bi.productaantal
+        FROM bestelling as b 
+        LEFT JOIN gebruikers as g
+        ON b.gebruikerid = g.id
+        LEFT JOIN bestelde_items AS bi
+        ON b.bestellingid = bi.bestellingid
+        LEFT JOIN producten as p
+        ON bi.productid = p.productid
+        WHERE b.bestellingdatum > now() - INTERVAL $days day 
+        GROUP BY bi.bestellingid, bi.productid
+        ORDER BY b.bestellingdatum DESC");
+
+        return $this->resultSet();
+    }
+
+    // ==============================
+    // Logging
+    // ==============================
     public function logToDatabase($data)
     {
         $this->query("INSERT INTO log (type, ip, username, userid, page, text, lognumber, time_to_log) VALUES (:type, :ip, :username, :userid, :page, :text, :lognumber, :time_to_log)");

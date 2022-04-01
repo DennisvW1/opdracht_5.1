@@ -81,5 +81,8 @@ class AdminView extends HtmlDoc
         echo "<hr>";
         $this->page = new OverviewView("items", $this->data["items"], $this->data["amount"]);
         $this->page->showContent();
+        echo "<hr>";
+        $this->page = new OverviewView("lastDays", $this->data["lastDays"], $this->data["amount"]);
+        $this->page->showContent();
     }
 }
